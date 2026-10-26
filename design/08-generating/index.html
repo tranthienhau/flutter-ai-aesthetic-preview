@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Creating your preview</title>
+<!-- Google Fonts: Spectral & Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#83232a",
+            "outline": "#6d7a70",
+            "secondary-fixed-dim": "#7ad9a5",
+            "on-background": "#171d19",
+            "tertiary-container": "#c05053",
+            "tertiary": "#a0383d",
+            "status-info-bg": "#E2EFEA",
+            "on-primary-fixed-variant": "#005232",
+            "surface-tint": "#006d43",
+            "status-warning-bg": "#F6EAE1",
+            "status-success-bg": "#E3F4E9",
+            "background": "#F4FCF9",
+            "status-danger-text": "#CE2020",
+            "inverse-on-surface": "#ecf3eb",
+            "outline-variant": "#bccabe",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "surface-container-low": "#eff5ee",
+            "on-secondary-fixed": "#002112",
+            "on-tertiary-fixed": "#410008",
+            "on-secondary-container": "#007148",
+            "primary-fixed": "#7dfab7",
+            "accent-fill-pressed": "#0B734A",
+            "text-secondary": "#46594F",
+            "status-success-text": "#0E7C3A",
+            "surface-container-lowest": "#ffffff",
+            "control-border": "#6DA074",
+            "on-secondary-fixed-variant": "#005232",
+            "surface": "#FFFFFF",
+            "primary-fixed-dim": "#5fdd9d",
+            "secondary-fixed": "#96f6c0",
+            "status-warning-text": "#AA4F09",
+            "accent-fill-disabled": "#B9DCCB",
+            "tertiary-fixed": "#ffdad8",
+            "error": "#ba1a1a",
+            "surface-dim": "#d5dcd4",
+            "on-surface": "#171d19",
+            "surface-variant": "#dde4dd",
+            "border-hairline": "#DCEAE3",
+            "text-primary": "#0C1F18",
+            "on-primary-container": "#f6fff5",
+            "primary-container": "#008654",
+            "on-surface-variant": "#3d4a41",
+            "on-tertiary-container": "#fffbff",
+            "surface-bright": "#f4fbf3",
+            "on-error": "#ffffff",
+            "surface-container": "#e9f0e8",
+            "on-primary-fixed": "#002111",
+            "accent-tint": "#E2F4EC",
+            "error-container": "#ffdad6",
+            "secondary-container": "#93f3bd",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e3eae2",
+            "inverse-surface": "#2b322d",
+            "surface-container-highest": "#dde4dd",
+            "support-blush": "#F59BD0",
+            "inverse-primary": "#5fdd9d",
+            "status-info-text": "#0D774D",
+            "primary": "#006a42",
+            "on-primary": "#ffffff",
+            "surface-alt": "#EAF6F0",
+            "support-pink": "#F555B4",
+            "text-tertiary": "#5A6A60",
+            "on-error-container": "#93000a",
+            "status-danger-bg": "#FBE5E5",
+            "accent-fill": "#0D7C50",
+            "on-secondary": "#ffffff",
+            "secondary": "#006c44"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "20px",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label": ["Public Sans", "sans-serif"],
+            "caption": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "display": ["Spectral", "serif"],
+            "body": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          },
+          "boxShadow": {
+            "clinical": "0 1px 2px rgba(12,31,24,0.04), 0 8px 24px rgba(12,31,24,0.06)",
+            "scanning": "0 0 16px 2px rgba(13,124,80,0.45)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes scanline {
+      0% { top: 0%; opacity: 0; }
+      15% { opacity: 0.95; }
+      85% { opacity: 0.95; }
+      100% { top: 92%; opacity: 0; }
+    }
+    .animate-scan {
+      animation: scanline 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#E2F4EC] text-text-primary antialiased min-h-screen flex justify-center items-center p-0 md:p-6 selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Screen Canvas (393px width fixed frame emulation) -->
+<div class="w-full max-w-[393px] h-[852px] bg-[#E2F4EC] relative flex flex-col justify-between overflow-hidden shadow-2xl md:rounded-[44px] border border-border-hairline select-none">
+<!-- Top Status Bar & Docked TopAppBar from Shared Spec -->
+<header class="w-full z-40 bg-transparent flex flex-col pt-3 px-5">
+<!-- iOS status indicator row -->
+<div class="flex justify-between items-center h-7 text-xs font-semibold tracking-tight text-text-primary mb-1">
+<span>9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[15px]">wifi</span>
+<span class="material-symbols-outlined text-[17px]">battery_full</span>
+</div>
+</div>
+<!-- TopAppBar execution: leading 'close', brand 'Mirra', trailing 'Help' -->
+<div class="h-12 flex items-center justify-between">
+<button aria-label="Cancel process" class="w-9 h-9 rounded-full flex items-center justify-center text-text-secondary hover:text-accent-fill active:opacity-70 transition-all bg-white/70 backdrop-blur-sm shadow-sm" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="close">close</span>
+</button>
+<span class="font-display text-xl font-bold tracking-tight text-text-primary">Mirra</span>
+<button class="font-label text-caption font-medium text-text-secondary hover:text-accent-fill active:opacity-80 transition-colors px-2 py-1 rounded-full bg-white/40" type="button">
+          Help
+        </button>
+</div>
+</header>
+<!-- Main Content Flow (Focused Single Journey) -->
+<main class="flex-1 flex flex-col justify-start px-5 pt-3 pb-4 overflow-y-auto">
+<!-- Headline & Subtitle Section -->
+<div class="text-center mb-4">
+<h1 class="font-display text-[26px] leading-[32px] font-bold text-text-primary tracking-tight">
+          Creating your preview
+        </h1>
+<p class="font-label text-[13px] leading-[18px] text-text-secondary mt-1">
+          Lip filler · 1.0 ml · usually 15–25 seconds
+        </p>
+</div>
+<!-- Focal Architecture: User Portrait Container with Clinical Scanning Grid -->
+<div class="relative mx-auto w-[210px] h-[260px] rounded-[24px] overflow-hidden bg-surface shadow-clinical border border-border-hairline/80 flex-shrink-0 mb-4 group">
+<!-- Exact Data Placeholder Image -->
+<img alt="Original face upload" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1V4eeRsKGSqBR_lHdFXtapEUDw-AF82s--XTB6TTLfMg3v_5F9FZwk15SJ2l6VYGDIAz8lKznMm5WGU34Zmsj-mDaKt8gN25YE93KtCJfGOm0vgeJD-niTHuu_xX-SAXm_2k0DGr-yzhNc6nUtR0AGUwebbMR_ksDnlTNQJ9AFwCwipORF7TWfKgH9LZgPni_sLmqSkwMPN8rVKgQU3pPUjxORHLRZo0ugZwnxqervSP6vKibUH_dHYJBw8"/>
+<!-- Clinical High-Tech Overlay: Subtle Grid Mesh & Scanning Beam -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-primary/5 via-transparent to-primary/10"></div>
+<!-- Glowing Horizontal Scan Line -->
+<div class="absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#10A56A] to-transparent shadow-scanning animate-scan pointer-events-none">
+<div class="w-24 h-[18px] -mt-[8px] mx-auto bg-gradient-to-b from-[#10A56A]/25 to-transparent blur-sm rounded-full"></div>
+</div>
+<!-- Four Face Landmarks / Reticle Markers for Clinical AI Mapping -->
+<div class="absolute top-4 left-4 w-2.5 h-2.5 border-t-2 border-l-2 border-white/80 rounded-tl-sm pointer-events-none"></div>
+<div class="absolute top-4 right-4 w-2.5 h-2.5 border-t-2 border-r-2 border-white/80 rounded-tr-sm pointer-events-none"></div>
+<div class="absolute bottom-4 left-4 w-2.5 h-2.5 border-b-2 border-l-2 border-white/80 rounded-bl-sm pointer-events-none"></div>
+<div class="absolute bottom-4 right-4 w-2.5 h-2.5 border-b-2 border-r-2 border-white/80 rounded-br-sm pointer-events-none"></div>
+<!-- Target Lip Anchor Clinical Focal Ring -->
+<div class="absolute top-[68%] left-[49%] -translate-x-1/2 -translate-y-1/2 w-16 h-8 rounded-full border border-dashed border-white/60 bg-white/10 backdrop-blur-[1px] pointer-events-none flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-accent-fill/80 animate-ping"></div>
+</div>
+<!-- Live Scanning Pill Tag -->
+<div class="absolute bottom-3 left-3 right-3 flex justify-center pointer-events-none">
+<div class="bg-[#0C1F18]/85 backdrop-blur-md px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-sm border border-white/10">
+<span class="w-1.5 h-1.5 rounded-full bg-[#10A56A] animate-pulse"></span>
+<span class="font-label text-[11px] font-medium text-white tracking-wide">
+              Face mapping in progress
+            </span>
+</div>
+</div>
+</div>
+<!-- Step Progression List Card -->
+<div class="w-full bg-surface rounded-[20px] p-4 shadow-clinical border border-border-hairline mb-3">
+<ul class="space-y-3.5">
+<!-- Step 1: Completed -->
+<li class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-status-success-bg flex items-center justify-center flex-shrink-0 text-accent-fill">
+<span class="material-symbols-outlined text-[17px] font-semibold" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<span class="font-label text-[13.5px] font-medium text-text-primary">Photo encrypted and uploaded</span>
+<span class="font-label text-[11px] text-text-tertiary">Done</span>
+</div>
+</li>
+<!-- Step 2: Completed -->
+<li class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-status-success-bg flex items-center justify-center flex-shrink-0 text-accent-fill">
+<span class="material-symbols-outlined text-[17px] font-semibold" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<span class="font-label text-[13.5px] font-medium text-text-primary">Face mapped</span>
+<span class="font-label text-[11px] text-text-tertiary">Done</span>
+</div>
+</li>
+<!-- Step 3: Active Generating State -->
+<li class="flex items-center gap-3 py-0.5">
+<div class="w-6 h-6 flex items-center justify-center flex-shrink-0 relative">
+<svg class="animate-spin w-5 h-5 text-accent-fill" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-20" cx="12" cy="12" r="10" stroke="#0D7C50" stroke-width="3"></circle>
+<path class="opacity-100" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<span class="font-label text-[13.5px] font-semibold text-accent-fill">Generating simulation</span>
+<span class="w-1.5 h-1.5 rounded-full bg-accent-fill animate-ping"></span>
+</div>
+<span class="font-label text-[11.5px] font-semibold text-accent-fill bg-accent-tint px-2 py-0.5 rounded-full">Active</span>
+</div>
+</li>
+<!-- Step 4: Pending -->
+<li class="flex items-center gap-3 opacity-60">
+<div class="w-6 h-6 rounded-full border-[1.5px] border-border-hairline bg-surface-bright flex items-center justify-center flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-text-tertiary/40"></span>
+</div>
+<div class="flex-1 flex justify-between items-center">
+<span class="font-label text-[13.5px] font-medium text-text-tertiary">Quality check</span>
+<span class="font-label text-[11px] text-text-tertiary">Pending</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Privacy & Clinical Guarantee Statement -->
+<div class="flex items-center justify-center gap-1.5 text-center px-4 mb-2">
+<span class="material-symbols-outlined text-[15px] text-text-tertiary" data-icon="lock">lock</span>
+<span class="font-caption text-[12.5px] text-text-tertiary">
+          Your original photo is never altered.
+        </span>
+</div>
+</main>
+<!-- Bottom Action Area (Secondary Pill Action - Suppressing BottomNavBar per Semantic Shell Mandate) -->
+<footer class="w-full px-5 pb-8 pt-1 flex flex-col items-center">
+<button class="w-full h-[48px] rounded-full bg-white/90 hover:bg-white text-accent-fill font-label text-[15px] font-semibold tracking-wide border-[1.5px] border-accent-fill active:bg-accent-tint transition-all shadow-sm flex items-center justify-center" type="button">
+        Cancel
+      </button>
+<!-- Home Indicator bar -->
+<div class="w-32 h-1 bg-text-primary/20 rounded-full mt-5"></div>
+</footer>
+</div>
+</body></html>

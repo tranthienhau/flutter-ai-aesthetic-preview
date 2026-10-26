@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - History</title>
+<!-- Google Fonts: Spectral & Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Spectral:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#c05053",
+            "secondary-container": "#93f3bd",
+            "support-blush": "#F59BD0",
+            "primary-fixed-dim": "#5fdd9d",
+            "error-container": "#ffdad6",
+            "text-primary": "#0C1F18",
+            "accent-tint": "#E2F4EC",
+            "surface-alt": "#EAF6F0",
+            "status-info-text": "#0D774D",
+            "secondary": "#006c44",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#005232",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-tertiary-container": "#fffbff",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "status-success-bg": "#E3F4E9",
+            "status-warning-text": "#AA4F09",
+            "on-background": "#171d19",
+            "border-hairline": "#DCEAE3",
+            "outline": "#6d7a70",
+            "surface-container-low": "#eff5ee",
+            "inverse-on-surface": "#ecf3eb",
+            "on-tertiary-fixed": "#410008",
+            "background": "#F4FCF9",
+            "tertiary": "#a0383d",
+            "surface-dim": "#d5dcd4",
+            "on-error-container": "#93000a",
+            "surface-bright": "#f4fbf3",
+            "support-pink": "#F555B4",
+            "accent-fill": "#0D7C50",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "accent-fill-disabled": "#B9DCCB",
+            "on-primary-fixed": "#002111",
+            "inverse-surface": "#2b322d",
+            "primary-fixed": "#7dfab7",
+            "primary-container": "#008654",
+            "text-tertiary": "#5A6A60",
+            "status-success-text": "#0E7C3A",
+            "tertiary-fixed": "#ffdad8",
+            "status-danger-bg": "#FBE5E5",
+            "status-danger-text": "#CE2020",
+            "on-surface-variant": "#3d4a41",
+            "accent-fill-pressed": "#0B734A",
+            "status-warning-bg": "#F6EAE1",
+            "control-border": "#6DA074",
+            "outline-variant": "#bccabe",
+            "on-tertiary": "#ffffff",
+            "on-secondary-container": "#007148",
+            "status-info-bg": "#E2EFEA",
+            "text-secondary": "#46594F",
+            "surface-tint": "#006d43",
+            "on-surface": "#171d19",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#e3eae2",
+            "surface-container": "#e9f0e8",
+            "on-secondary": "#ffffff",
+            "surface": "#FFFFFF",
+            "surface-variant": "#dde4dd",
+            "surface-container-highest": "#dde4dd",
+            "secondary-fixed-dim": "#7ad9a5",
+            "inverse-primary": "#5fdd9d",
+            "on-primary-fixed-variant": "#005232",
+            "secondary-fixed": "#96f6c0",
+            "on-primary-container": "#f6fff5",
+            "on-secondary-fixed": "#002112",
+            "primary": "#006a42"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "20px",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display": ["Spectral", "serif"],
+            "caption": ["Public Sans", "sans-serif"],
+            "body": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "label": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ]
+          },
+          "boxShadow": {
+            "soft": "0 1px 2px rgba(12,31,24,.04), 0 8px 24px rgba(12,31,24,.06)",
+            "subtle": "0 2px 8px rgba(12,31,24,.03)"
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Hide scrollbar for category pills on narrow containers */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased flex justify-center items-center min-h-screen p-0 sm:p-4 selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Screen Frame (393px x 852px) -->
+<div class="relative w-full max-w-[393px] h-[852px] bg-background overflow-hidden flex flex-col justify-between shadow-2xl sm:rounded-[44px] sm:border-[8px] sm:border-surface">
+<!-- Top Safe Area & Header Section -->
+<header class="w-full pt-12 px-margin pb-3 flex flex-col gap-4 z-10 shrink-0">
+<!-- Title & User Avatar Row -->
+<div class="flex items-center justify-between">
+<h1 class="font-display text-[28px] leading-[34px] font-bold text-text-primary tracking-tight">
+          History
+        </h1>
+<!-- Profile Avatar with Online Pulse Indicator -->
+<div class="relative flex items-center justify-center">
+<div class="w-9 h-9 rounded-full ring-2 ring-border-hairline overflow-hidden shadow-sm">
+<img alt="Noa Levi profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UD1P22pt87PytX2bvcyeZdMkM6VQke-uGu1cCebjuS2AsaWvMU8V1qKCPs0tAx9iXV3LkxdaAQJUJQ5s2dJjIPVusOwUhy5l4ywVt63Ax01ad6m-EGNEGqJ4yS794ZVpRrsfBfA8Ae4nTnGey4rf7fAFA-Pik7gcViwwIsPFkQkTzkdv-RC32gKfQyBqoSqG8xCRSK-CJLsk9qUlmzufNDsxvcXFnPL3BL_1oXDEcRO8JpCHzymDiJCpQy"/>
+</div>
+<!-- Online status dot -->
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-accent-fill rounded-full ring-2 ring-background"></span>
+</div>
+</div>
+<!-- Filter Chips Pill Row -->
+<nav aria-label="History categories" class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-1">
+<!-- Selected 'All' Chip -->
+<button class="h-[34px] px-4 rounded-full bg-accent-tint text-accent-fill font-label text-label font-semibold flex items-center justify-center shrink-0 transition-transform active:scale-95">
+          All
+        </button>
+<!-- Unselected 'Hair' Chip -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-tertiary font-label text-label font-medium flex items-center justify-center shrink-0 hover:border-control-border transition-colors active:scale-95">
+          Hair
+        </button>
+<!-- Unselected 'Makeup' Chip -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-tertiary font-label text-label font-medium flex items-center justify-center shrink-0 hover:border-control-border transition-colors active:scale-95">
+          Makeup
+        </button>
+<!-- Unselected 'Filler & Botox' Chip -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-tertiary font-label text-label font-medium flex items-center justify-center shrink-0 hover:border-control-border transition-colors active:scale-95">
+          Filler &amp; Botox
+        </button>
+</nav>
+</header>
+<!-- Main Content Area: Centered Hero Empty State Card & Actions -->
+<main class="flex-1 flex flex-col justify-center px-margin py-2 overflow-y-auto no-scrollbar z-10">
+<!-- Elevated Aesthetic Glass/Card Container -->
+<div class="w-full bg-surface rounded-[24px] border border-border-hairline shadow-soft overflow-hidden flex flex-col">
+<!-- Hero Real Photographic Card Header -->
+<div class="relative w-full h-[188px] overflow-hidden bg-surface-alt">
+<img alt="A high-end minimal aesthetic beauty photograph of an elegant makeup brush, a chic open compact mirror, and a small delicate potted succulent green plant resting on a textured soft mint linen cloth surface, soft diffuse natural morning daylight, serene calm med-spa salon aesthetic, authentic clean real photography." class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCosowZahwAagIlGK28yzlaxD1XT15K45RK4WFIadRZaSla-HcXXYsmrW8GsCgUXcIfpGeJfYFMYN2QU_IxtqpqK6Tet1bayii8NfT9vp7kpotLuK4aGR_bm-5TqnajjfzdHz2KjzyTed7EsWLEvnFYMs2wScF87a8xI6kzz4pJcqK_ZKUMQID0cCmPel6N1229P2mMZZZbuGdrRdjZVPZqMKzuhltWsK4XwdaLQxE9g9bkRuTy40b1IWms_XXBKN1u1UdlBznLPZLS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-40"></div>
+<!-- Subtle Floating Soft Badge -->
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-border-hairline/80 flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-fill"></span>
+<span class="font-caption text-[11px] font-medium text-text-secondary">Archive empty</span>
+</div>
+</div>
+<!-- Empty State Narrative & Primary Action -->
+<div class="p-6 pt-5 text-center flex flex-col items-center">
+<h2 class="font-display text-[24px] leading-[30px] font-bold text-text-primary tracking-tight mb-2">
+            No previews yet
+          </h2>
+<p class="font-body text-[15px] leading-[22px] text-text-secondary max-w-[270px] mb-6">
+            Your previews are saved here for 30 days. You can delete them anytime.
+          </p>
+<!-- Primary Action Button: 52px Pill -->
+<button class="w-full h-[52px] rounded-full bg-accent-fill hover:bg-accent-fill-pressed active:scale-[0.98] transition-all duration-150 flex items-center justify-center gap-2 shadow-sm text-on-primary">
+<span class="font-label text-[16px] font-semibold tracking-wide">
+              Create your first preview
+            </span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Info Callout Banner / Mandatory Disclaimer -->
+<div class="mt-4 px-3.5 py-2.5 rounded-full bg-status-info-bg/70 border border-border-hairline flex items-center justify-center gap-2 text-center">
+<span class="material-symbols-outlined text-text-secondary text-[16px] shrink-0" data-icon="info">info</span>
+<span class="font-caption text-caption text-text-secondary tracking-normal">
+          AI-generated simulation, not a guaranteed medical outcome.
+        </span>
+</div>
+</main>
+<!-- Bottom Tab Bar (Fixed 4 Tabs: Studio, History, Clinic, Account) -->
+<footer class="w-full bg-surface shrink-0 z-20 shadow-[0_-2px_12px_rgba(12,31,24,0.03)] pb-safe">
+<div class="h-[68px] px-3 flex items-center justify-around">
+<!-- Tab 1: Studio (Inactive) -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-text-tertiary hover:text-accent-fill transition-colors group" href="#studio">
+<div class="w-10 h-7 flex items-center justify-center rounded-full mb-0.5">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-105 transition-transform" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<span class="font-caption text-[11px] font-medium leading-none">Studio</span>
+</a>
+<!-- Tab 2: History (Active - Lock to History) -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-accent-fill" href="#history">
+<div class="w-12 h-7 bg-accent-tint flex items-center justify-center rounded-full mb-0.5">
+<span class="material-symbols-outlined text-[22px] text-accent-fill" data-icon="photo_library" data-weight="fill" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+</div>
+<span class="font-caption text-[11px] font-semibold leading-none">History</span>
+</a>
+<!-- Tab 3: Clinic (Inactive) -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-text-tertiary hover:text-accent-fill transition-colors group" href="#clinic">
+<div class="w-10 h-7 flex items-center justify-center rounded-full mb-0.5">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-105 transition-transform" data-icon="domain">domain</span>
+</div>
+<span class="font-caption text-[11px] font-medium leading-none">Clinic</span>
+</a>
+<!-- Tab 4: Account (Inactive) -->
+<a class="flex flex-col items-center justify-center flex-1 h-full text-text-tertiary hover:text-accent-fill transition-colors group" href="#account">
+<div class="w-10 h-7 flex items-center justify-center rounded-full mb-0.5">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-105 transition-transform" data-icon="person">person</span>
+</div>
+<span class="font-caption text-[11px] font-medium leading-none">Account</span>
+</a>
+</div>
+<!-- iOS Home Bar Indicator Space Clearance -->
+<div class="w-full flex justify-center pb-2">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</footer>
+</div>
+</body></html>

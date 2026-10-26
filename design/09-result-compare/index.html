@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your preview - Mirra</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300..900;1,300..900&amp;family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-dim": "#d5dcd4",
+            "on-secondary": "#ffffff",
+            "status-warning-text": "#AA4F09",
+            "primary-container": "#008654",
+            "outline-variant": "#bccabe",
+            "status-info-text": "#0D774D",
+            "surface-tint": "#006d43",
+            "secondary-fixed": "#96f6c0",
+            "tertiary-container": "#c05053",
+            "on-error": "#ffffff",
+            "accent-tint": "#E2F4EC",
+            "status-danger-text": "#CE2020",
+            "on-tertiary-container": "#fffbff",
+            "inverse-primary": "#5fdd9d",
+            "text-secondary": "#46594F",
+            "inverse-surface": "#2b322d",
+            "border-hairline": "#DCEAE3",
+            "tertiary": "#a0383d",
+            "on-primary-container": "#f6fff5",
+            "on-surface-variant": "#3d4a41",
+            "on-secondary-container": "#007148",
+            "status-info-bg": "#E2EFEA",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "status-danger-bg": "#FBE5E5",
+            "text-primary": "#0C1F18",
+            "surface-variant": "#dde4dd",
+            "outline": "#6d7a70",
+            "surface-container-low": "#eff5ee",
+            "surface": "#FFFFFF",
+            "status-success-text": "#0E7C3A",
+            "accent-fill": "#0D7C50",
+            "inverse-on-surface": "#ecf3eb",
+            "accent-fill-disabled": "#B9DCCB",
+            "status-warning-bg": "#F6EAE1",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#5fdd9d",
+            "primary-fixed": "#7dfab7",
+            "secondary-fixed-dim": "#7ad9a5",
+            "surface-container": "#e9f0e8",
+            "on-surface": "#171d19",
+            "surface-container-highest": "#dde4dd",
+            "on-tertiary-fixed": "#410008",
+            "secondary": "#006c44",
+            "error": "#ba1a1a",
+            "text-tertiary": "#5A6A60",
+            "support-pink": "#F555B4",
+            "surface-bright": "#f4fbf3",
+            "on-primary-fixed-variant": "#005232",
+            "status-success-bg": "#E3F4E9",
+            "on-primary": "#ffffff",
+            "primary": "#006a42",
+            "tertiary-fixed": "#ffdad8",
+            "support-blush": "#F59BD0",
+            "on-background": "#171d19",
+            "surface-container-high": "#e3eae2",
+            "control-border": "#6DA074",
+            "on-secondary-fixed-variant": "#005232",
+            "background": "#F4FCF9",
+            "on-secondary-fixed": "#002112",
+            "on-tertiary-fixed-variant": "#83232a",
+            "secondary-container": "#93f3bd",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#002111",
+            "on-error-container": "#93000a",
+            "surface-alt": "#EAF6F0",
+            "accent-fill-pressed": "#0B734A"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "body": ["Public Sans", "sans-serif"],
+            "display": ["Spectral", "serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "label": ["Public Sans", "sans-serif"],
+            "caption": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "subtle": "0 1px 2px rgba(12,31,24,0.04), 0 8px 24px rgba(12,31,24,0.06)",
+            "handle": "0 2px 8px rgba(12,31,24,0.18), 0 0 1px rgba(12,31,24,0.2)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Safe container constraints */
+    .mobile-frame {
+      width: 100%;
+      max-width: 393px;
+      min-height: 852px;
+    }
+    /* Hide scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-surface-dim flex justify-center items-center min-h-screen antialiased selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Screen Frame (iOS 393x852) -->
+<div class="mobile-frame bg-background min-h-[852px] relative flex flex-col justify-between overflow-x-hidden shadow-2xl">
+<!-- Top Bar (Header with back, Spectral title, share) -->
+<header class="w-full pt-12 pb-3 px-margin flex items-center justify-between z-30 select-none">
+<!-- Back circle button -->
+<button aria-label="Go back" class="w-10 h-10 rounded-full bg-surface border border-border-hairline flex items-center justify-center text-text-primary shadow-subtle active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Screen Title in Spectral 20px / 600 -->
+<h1 class="font-display text-[20px] leading-[28px] font-semibold text-text-primary tracking-tight">
+        Your preview
+      </h1>
+<!-- Share button -->
+<button aria-label="Share preview" class="w-10 h-10 rounded-full bg-surface border border-border-hairline flex items-center justify-center text-text-primary shadow-subtle active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-margin pt-1 pb-4">
+<!-- Focal Hero: Interactive Before/After Split Card -->
+<div class="relative w-full aspect-[3/3.8] rounded-[20px] overflow-hidden shadow-subtle bg-surface border border-border-hairline select-none touch-none" id="slider-card">
+<!-- Underlying Base Image: After (Right side) -->
+<img alt="AI preview simulation after lip filler enhancement" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none" src="https://lh3.googleusercontent.com/aida/AEtjO1V4eeRsKGSqBR_lHdFXtapEUDw-AF82s--XTB6TTLfMg3v_5F9FZwk15SJ2l6VYGDIAz8lKznMm5WGU34Zmsj-mDaKt8gN25YE93KtCJfGOm0vgeJD-niTHuu_xX-SAXm_2k0DGr-yzhNc6nUtR0AGUwebbMR_ksDnlTNQJ9AFwCwipORF7TWfKgH9LZgPni_sLmqSkwMPN8rVKgQU3pPUjxORHLRZo0ugZwnxqervSP6vKibUH_dHYJBw8"/>
+<!-- Split Layer: Before (Left side) clipped by container width -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none" id="before-clip-container" style="width: 52%;">
+<img alt="Original portrait photo before treatment" class="absolute top-0 left-0 w-full h-full object-cover object-center max-w-none" id="before-photo-reference" src="https://lh3.googleusercontent.com/aida/AEtjO1V4eeRsKGSqBR_lHdFXtapEUDw-AF82s--XTB6TTLfMg3v_5F9FZwk15SJ2l6VYGDIAz8lKznMm5WGU34Zmsj-mDaKt8gN25YE93KtCJfGOm0vgeJD-niTHuu_xX-SAXm_2k0DGr-yzhNc6nUtR0AGUwebbMR_ksDnlTNQJ9AFwCwipORF7TWfKgH9LZgPni_sLmqSkwMPN8rVKgQU3pPUjxORHLRZo0ugZwnxqervSP6vKibUH_dHYJBw8" style="width: 353px; height: 100%;"/>
+</div>
+<!-- Before Floating Badge Pill (Left) -->
+<div class="absolute top-3.5 left-3.5 z-20 pointer-events-none">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface/85 backdrop-blur-md border border-white/60 text-text-primary font-label text-caption font-medium tracking-wide shadow-sm">
+            Before
+          </span>
+</div>
+<!-- After Floating Badge Pill (Right) -->
+<div class="absolute top-3.5 right-3.5 z-20 pointer-events-none">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-accent-fill/90 backdrop-blur-md border border-accent-fill/30 text-white font-label text-caption font-medium tracking-wide shadow-sm">
+            After
+          </span>
+</div>
+<!-- Draggable Divider Line & Handle -->
+<div class="absolute top-0 bottom-0 z-20 w-[2px] bg-white cursor-ew-resize pointer-events-none" id="slider-divider" style="left: 52%; transform: translateX(-50%);">
+<!-- Central thumb handle -->
+<div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 w-8 h-8 rounded-full bg-surface border border-border-hairline shadow-handle flex items-center justify-center text-text-primary">
+<span class="material-symbols-outlined text-[16px] text-text-secondary select-none" data-icon="unfold_more" style="transform: rotate(90deg);">unfold_more</span>
+</div>
+</div>
+<!-- Bottom-Left AI Simulation Badge -->
+<div class="absolute bottom-3.5 left-3.5 z-20 pointer-events-none">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-text-primary/75 backdrop-blur-md text-white border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-white" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-caption text-[12px] leading-none font-medium tracking-normal text-white">AI simulation</span>
+</div>
+</div>
+<!-- Bottom-Right Zoom / Fullscreen button -->
+<button aria-label="Expand image view" class="absolute bottom-3.5 right-3.5 z-20 w-8 h-8 rounded-full bg-surface/90 backdrop-blur-md border border-border-hairline shadow-subtle flex items-center justify-center text-text-primary active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="fullscreen">fullscreen</span>
+</button>
+</div>
+<!-- Treatment Details Row with Chips -->
+<section aria-label="Selected Treatment Details" class="mt-4 mb-3">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<!-- Active chip: Lip filler -->
+<div class="h-[34px] px-3.5 rounded-full bg-accent-tint flex items-center shrink-0 border border-transparent">
+<span class="font-label text-label text-accent-fill font-semibold">Lip filler</span>
+</div>
+<!-- Active chip: 1.0 ml -->
+<div class="h-[34px] px-3.5 rounded-full bg-accent-tint flex items-center shrink-0 border border-transparent">
+<span class="font-label text-label text-accent-fill font-semibold">1.0 ml</span>
+</div>
+<!-- Active chip: Natural look -->
+<div class="h-[34px] px-3.5 rounded-full bg-accent-tint flex items-center shrink-0 border border-transparent">
+<span class="font-label text-label text-accent-fill font-semibold">Natural look</span>
+</div>
+</div>
+</section>
+<!-- Medical Disclaimer Container -->
+<section aria-label="Medical Outcome Disclaimer" class="bg-status-info-bg/50 border border-border-hairline rounded-[14px] p-3 flex items-start gap-2.5 mb-5" role="note">
+<span class="material-symbols-outlined text-[18px] text-text-secondary shrink-0 mt-0.5" data-icon="info">info</span>
+<p class="font-body text-[13px] leading-[18px] text-text-secondary">
+          AI-generated simulation, not a guaranteed medical outcome.
+        </p>
+</section>
+<!-- Primary & Secondary Action Buttons -->
+<div class="w-full flex gap-3 mt-auto">
+<!-- Secondary Button: Try another amount -->
+<button class="flex-1 h-[52px] rounded-full bg-surface border-[1.5px] border-accent-fill text-accent-fill font-title text-[15px] font-semibold flex items-center justify-center shadow-subtle active:scale-[0.98] transition-transform" type="button">
+          Try another amount
+        </button>
+<!-- Primary Button: Save to clinic -->
+<button class="flex-1 h-[52px] rounded-full bg-accent-fill text-white font-title text-[15px] font-semibold flex items-center justify-center shadow-subtle active:bg-accent-fill-pressed active:scale-[0.98] transition-all" type="button">
+          Save to clinic
+        </button>
+</div>
+<!-- Destructive Text Link -->
+<div class="w-full flex justify-center items-center pt-3.5 pb-2">
+<button class="group inline-flex items-center gap-1.5 font-label text-[14px] leading-5 font-medium text-status-danger-text hover:underline active:opacity-75 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px] text-status-danger-text" data-icon="delete">delete</span>
+          Delete this preview
+        </button>
+</div>
+</main>
+<!-- Bottom Safe Area Spacer (Home Indicator) -->
+<div aria-hidden="true" class="w-full h-6 pb-2 flex justify-center items-center select-none">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</div>
+<!-- Interactive Before/After Split Drag Script -->
+<script>
+    (function initSlider() {
+      const card = document.getElementById('slider-card');
+      const clipContainer = document.getElementById('before-clip-container');
+      const divider = document.getElementById('slider-divider');
+      const photoRef = document.getElementById('before-photo-reference');
+
+      if (!card || !clipContainer || !divider) return;
+
+      function updateDimensions() {
+        if (photoRef && card) {
+          photoRef.style.width = card.offsetWidth + 'px';
+          photoRef.style.height = card.offsetHeight + 'px';
+        }
+      }
+
+      window.addEventListener('resize', updateDimensions);
+      setTimeout(updateDimensions, 50);
+
+      let isDragging = false;
+
+      function setPosition(xPos) {
+        const rect = card.getBoundingClientRect();
+        let percentage = ((xPos - rect.left) / rect.width) * 100;
+        if (percentage < 5) percentage = 5;
+        if (percentage > 95) percentage = 95;
+
+        clipContainer.style.width = percentage + '%';
+        divider.style.left = percentage + '%';
+      }
+
+      function onPointerMove(e) {
+        if (!isDragging) return;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setPosition(clientX);
+      }
+
+      function onPointerUp() {
+        isDragging = false;
+        window.removeEventListener('mousemove', onPointerMove);
+        window.removeEventListener('mouseup', onPointerUp);
+        window.removeEventListener('touchmove', onPointerMove);
+        window.removeEventListener('touchend', onPointerUp);
+      }
+
+      function onPointerDown(e) {
+        isDragging = true;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setPosition(clientX);
+        window.addEventListener('mousemove', onPointerMove);
+        window.addEventListener('mouseup', onPointerUp);
+        window.addEventListener('touchmove', onPointerMove, { passive: false });
+        window.addEventListener('touchend', onPointerUp);
+      }
+
+      card.addEventListener('mousedown', onPointerDown);
+      card.addEventListener('touchstart', onPointerDown, { passive: true });
+    })();
+  </script>
+</body></html>

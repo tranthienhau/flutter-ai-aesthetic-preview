@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Subscription</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Public Sans & Spectral -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Spectral:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#006a42",
+            "error-container": "#ffdad6",
+            "surface-dim": "#d5dcd4",
+            "status-info-text": "#0D774D",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffdad8",
+            "on-primary-container": "#f6fff5",
+            "control-border": "#6DA074",
+            "surface-container-highest": "#dde4dd",
+            "background": "#F4FCF9",
+            "text-secondary": "#46594F",
+            "text-primary": "#0C1F18",
+            "on-surface": "#171d19",
+            "surface": "#FFFFFF",
+            "status-info-bg": "#E2EFEA",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "on-secondary-fixed": "#002112",
+            "text-tertiary": "#5A6A60",
+            "on-secondary": "#ffffff",
+            "support-pink": "#F555B4",
+            "on-tertiary-fixed": "#410008",
+            "inverse-primary": "#5fdd9d",
+            "status-success-text": "#0E7C3A",
+            "primary-fixed-dim": "#5fdd9d",
+            "surface-container": "#e9f0e8",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#7ad9a5",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "border-hairline": "#DCEAE3",
+            "on-background": "#171d19",
+            "status-warning-text": "#AA4F09",
+            "accent-fill": "#0D7C50",
+            "surface-bright": "#f4fbf3",
+            "secondary-fixed": "#96f6c0",
+            "on-secondary-fixed-variant": "#005232",
+            "on-primary": "#ffffff",
+            "outline-variant": "#bccabe",
+            "secondary-container": "#93f3bd",
+            "inverse-surface": "#2b322d",
+            "surface-variant": "#dde4dd",
+            "on-surface-variant": "#3d4a41",
+            "accent-fill-disabled": "#B9DCCB",
+            "accent-fill-pressed": "#0B734A",
+            "accent-tint": "#E2F4EC",
+            "status-warning-bg": "#F6EAE1",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-secondary-container": "#007148",
+            "support-blush": "#F59BD0",
+            "surface-container-low": "#eff5ee",
+            "surface-alt": "#EAF6F0",
+            "status-danger-bg": "#FBE5E5",
+            "on-primary-fixed-variant": "#005232",
+            "primary-container": "#008654",
+            "on-tertiary-container": "#fffbff",
+            "surface-tint": "#006d43",
+            "tertiary": "#a0383d",
+            "outline": "#6d7a70",
+            "secondary": "#006c44",
+            "surface-container-high": "#e3eae2",
+            "status-danger-text": "#CE2020",
+            "primary-fixed": "#7dfab7",
+            "on-primary-fixed": "#002111",
+            "tertiary-container": "#c05053",
+            "error": "#ba1a1a",
+            "status-success-bg": "#E3F4E9",
+            "inverse-on-surface": "#ecf3eb"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "20px",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2rem",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "body": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "label": ["Public Sans", "sans-serif"],
+            "display": ["Spectral", "serif"],
+            "caption": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "clinical": "0 1px 2px rgba(12,31,24,0.04), 0 8px 24px rgba(12,31,24,0.06)",
+            "clinical-sm": "0 1px 2px rgba(12,31,24,0.04)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center items-center p-0 md:p-6 font-body">
+<!-- Mobile Simulator Frame (393px x 852px) -->
+<main class="w-full max-w-[393px] h-[852px] bg-background relative overflow-hidden flex flex-col shadow-2xl md:rounded-[44px] border border-border-hairline">
+<!-- iOS Status Bar -->
+<header class="w-full h-11 pt-3 px-7 flex justify-between items-center text-text-primary text-[14px] font-semibold shrink-0 z-40">
+<time class="font-body font-semibold tracking-tight text-[15px]" datetime="09:41">9:41</time>
+<div class="flex items-center gap-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[19px]" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar / Navigation Header -->
+<nav aria-label="Subscription Navigation" class="w-full h-14 px-margin flex items-center justify-between shrink-0 z-30">
+<button aria-label="Back to account settings" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-alt active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-display text-[25px] font-bold text-text-primary tracking-tight">Subscription</h1>
+<button aria-label="Support Help" class="text-text-secondary hover:text-accent-fill transition-colors px-2 py-1" type="button">
+<span class="font-label text-label font-medium">Help</span>
+</button>
+</nav>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto px-margin pt-2 pb-24 space-y-4 no-scrollbar">
+<!-- FOCAL ARCHITECTURE: Plan Overview Card -->
+<section aria-labelledby="active-plan-title" class="bg-surface rounded-lg p-5 border border-border-hairline shadow-clinical transition-all">
+<!-- Card Top Bar: Plan Name & Active Chip -->
+<div class="flex items-center justify-between pb-3">
+<h2 class="font-title text-[18px] font-semibold text-text-primary tracking-tight" id="active-plan-title">Mirra Monthly</h2>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-status-success-bg text-status-success-text text-caption font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success-text"></span>
+            Active
+          </span>
+</div>
+<!-- Numerals Display: Price Block -->
+<div class="flex items-baseline py-1 mb-2 border-b border-border-hairline pb-4">
+<span class="font-display text-[36px] font-bold text-text-primary leading-none">79 ILS</span>
+<span class="font-label text-label font-medium text-text-secondary ml-1.5">/ month</span>
+</div>
+<!-- Plan Renewal Metadata -->
+<div class="space-y-1 mb-5">
+<p class="font-title text-[15px] font-medium text-text-primary">Renews Nov 27, 2026</p>
+<p class="font-caption text-caption text-text-tertiary">Started after free trial on Oct 30</p>
+</div>
+<!-- Feature Entitlement Summary -->
+<div class="space-y-3 pt-3 border-t border-border-hairline/80">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-accent-fill text-[19px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label text-label text-text-secondary">Unlimited hair &amp; makeup previews</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-accent-fill text-[19px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label text-label text-text-secondary">30 filler &amp; Botox previews per month</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-accent-fill text-[19px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label text-label text-text-secondary">Share previews with your clinic</span>
+</div>
+</div>
+</section>
+<!-- Account & Billing Settings List Card -->
+<section aria-label="Billing Settings" class="bg-surface rounded-lg border border-border-hairline shadow-clinical overflow-hidden divide-y divide-border-hairline">
+<!-- Row 1: App Store Payment -->
+<button class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-surface-bright active:bg-surface-alt transition-colors group" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill shrink-0">
+<span class="material-symbols-outlined text-[19px]">credit_card</span>
+</div>
+<div>
+<p class="font-label text-[15px] font-medium text-text-primary">Payment via App Store</p>
+<p class="font-caption text-[12px] text-text-tertiary">Apple ID account billing</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<!-- Row 2: Restore Purchases -->
+<button class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-surface-bright active:bg-surface-alt transition-colors group" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary shrink-0">
+<span class="material-symbols-outlined text-[19px]">receipt_long</span>
+</div>
+<p class="font-label text-[15px] font-medium text-text-primary">Restore purchases</p>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+<!-- Row 3: Billing History -->
+<button class="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-surface-bright active:bg-surface-alt transition-colors group" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-alt flex items-center justify-center text-text-secondary shrink-0">
+<span class="material-symbols-outlined text-[19px]">history</span>
+</div>
+<p class="font-label text-[15px] font-medium text-text-primary">Billing history</p>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px] group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</button>
+</section>
+<!-- Cancellation Section -->
+<section aria-labelledby="cancellation-title" class="bg-surface rounded-lg p-5 border border-border-hairline shadow-clinical">
+<h3 class="font-title text-[17px] font-semibold text-text-primary mb-1" id="cancellation-title">Cancel subscription</h3>
+<p class="font-body text-[14px] text-text-secondary leading-snug mb-4">
+          You keep access until Nov 27. No further charges.
+        </p>
+<!-- Destructive Secondary Button -->
+<button class="w-full h-[50px] rounded-full bg-surface border-[1.5px] border-status-danger-text text-status-danger-text font-label text-[15px] font-semibold hover:bg-status-danger-bg/40 active:bg-status-danger-bg transition-colors flex items-center justify-center" type="button">
+          Cancel subscription
+        </button>
+<p class="font-caption text-caption text-text-tertiary text-center mt-3">
+          Cancellation is handled by Apple / Google; we take you straight there.
+        </p>
+</section>
+</div>
+<!-- Fixed Bottom Tab Bar -->
+<nav aria-label="Primary Navigation" class="absolute bottom-0 left-0 w-full h-[84px] bg-surface border-t border-border-hairline flex items-start justify-around px-2 pt-2.5 z-40">
+<!-- Tab 1: Studio -->
+<a class="flex flex-col items-center justify-center w-16 group active:opacity-75" href="#studio">
+<div class="w-12 h-8 flex items-center justify-center rounded-full text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<span class="text-[12px] font-medium text-text-tertiary group-hover:text-text-primary tracking-tight">Studio</span>
+</a>
+<!-- Tab 2: History -->
+<a class="flex flex-col items-center justify-center w-16 group active:opacity-75" href="#history">
+<div class="w-12 h-8 flex items-center justify-center rounded-full text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">photo_library</span>
+</div>
+<span class="text-[12px] font-medium text-text-tertiary group-hover:text-text-primary tracking-tight">History</span>
+</a>
+<!-- Tab 3: Clinic -->
+<a class="flex flex-col items-center justify-center w-16 group active:opacity-75" href="#clinic">
+<div class="w-12 h-8 flex items-center justify-center rounded-full text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+</div>
+<span class="text-[12px] font-medium text-text-tertiary group-hover:text-text-primary tracking-tight">Clinic</span>
+</a>
+<!-- Tab 4: Account (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center w-16 group active:opacity-75" href="#account">
+<div class="w-12 h-8 flex items-center justify-center rounded-full bg-accent-tint text-accent-fill transition-colors">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<span class="text-[12px] font-semibold text-accent-fill tracking-tight">Account</span>
+</a>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-text-primary/25 rounded-full pointer-events-none z-50"></div>
+</main>
+</body></html>

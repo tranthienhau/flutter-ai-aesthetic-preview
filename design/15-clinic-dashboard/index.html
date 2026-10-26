@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Clinic Today</title>
+<!-- Google Fonts: Public Sans & Spectral -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Spectral:ital,wght@0,400;0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "support-blush": "#F59BD0",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "surface-container-highest": "#dde4dd",
+            "inverse-on-surface": "#ecf3eb",
+            "surface-bright": "#f4fbf3",
+            "accent-tint": "#E2F4EC",
+            "on-tertiary-fixed": "#410008",
+            "accent-fill-disabled": "#B9DCCB",
+            "surface-container": "#e9f0e8",
+            "secondary-fixed": "#96f6c0",
+            "error": "#ba1a1a",
+            "on-primary-fixed-variant": "#005232",
+            "text-secondary": "#46594F",
+            "primary-fixed": "#7dfab7",
+            "surface-variant": "#dde4dd",
+            "on-secondary-fixed": "#002112",
+            "on-tertiary": "#ffffff",
+            "status-danger-text": "#CE2020",
+            "on-background": "#171d19",
+            "tertiary-container": "#c05053",
+            "on-secondary-fixed-variant": "#005232",
+            "inverse-primary": "#5fdd9d",
+            "status-danger-bg": "#FBE5E5",
+            "inverse-surface": "#2b322d",
+            "on-secondary-container": "#007148",
+            "primary-container": "#008654",
+            "tertiary-fixed": "#ffdad8",
+            "surface-container-lowest": "#ffffff",
+            "surface-alt": "#EAF6F0",
+            "on-surface": "#171d19",
+            "surface-tint": "#006d43",
+            "control-border": "#6DA074",
+            "status-warning-bg": "#F6EAE1",
+            "border-hairline": "#DCEAE3",
+            "on-primary": "#ffffff",
+            "error-container": "#ffdad6",
+            "status-info-bg": "#E2EFEA",
+            "primary-fixed-dim": "#5fdd9d",
+            "text-primary": "#0C1F18",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-surface-variant": "#3d4a41",
+            "on-error": "#ffffff",
+            "outline": "#6d7a70",
+            "secondary": "#006c44",
+            "outline-variant": "#bccabe",
+            "on-error-container": "#93000a",
+            "secondary-container": "#93f3bd",
+            "status-success-bg": "#E3F4E9",
+            "on-tertiary-container": "#fffbff",
+            "primary": "#006a42",
+            "text-tertiary": "#5A6A60",
+            "status-info-text": "#0D774D",
+            "accent-fill": "#0D7C50",
+            "surface-dim": "#d5dcd4",
+            "surface-container-high": "#e3eae2",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#eff5ee",
+            "status-success-text": "#0E7C3A",
+            "accent-fill-pressed": "#0B734A",
+            "surface": "#FFFFFF",
+            "on-primary-container": "#f6fff5",
+            "support-pink": "#F555B4",
+            "on-primary-fixed": "#002111",
+            "tertiary": "#a0383d",
+            "secondary-fixed-dim": "#7ad9a5",
+            "background": "#F4FCF9",
+            "status-warning-text": "#AA4F09"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "20px",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "title": ["Public Sans"],
+            "label": ["Public Sans"],
+            "display": ["Spectral"],
+            "caption": ["Public Sans"],
+            "body": ["Public Sans"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-shadow {
+      box-shadow: 0 1px 2px rgba(12,31,24,0.04), 0 8px 24px rgba(12,31,24,0.06);
+    }
+    body {
+      background-color: #F4FCF9;
+      color: #0C1F18;
+      font-family: 'Public Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-background min-h-screen flex justify-center selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Frame Container (393px width lock for high fidelity preview) -->
+<div class="w-full max-w-[393px] bg-background min-h-screen relative flex flex-col pb-[90px] shadow-2xl border-x border-border-hairline">
+<!-- 1. Status Bar -->
+<header class="w-full pt-3 px-margin flex justify-between items-center z-20">
+<span class="font-label text-caption font-semibold tracking-tight text-text-primary">9:41</span>
+<div class="flex items-center gap-1.5 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar / Header -->
+<div class="px-margin pt-3 pb-2 flex justify-between items-end">
+<div>
+<p class="font-caption text-caption text-text-secondary">Lumiere Aesthetic Clinic · Tel Aviv</p>
+<h1 class="font-display text-[28px] leading-8 font-semibold text-text-primary tracking-tight mt-0.5">Today</h1>
+</div>
+<div class="relative">
+<img alt="Clinic practitioner portrait" class="w-9 h-9 rounded-full object-cover border-2 border-surface shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UBxYgdK9YSV92zc7vYH-Bfxbg6p4A7l7_Bac6u2rLMY3YUHyhEpk2ErGjyNOqP7P89l_-fwBxcst6vpfmoGDPyM7DzblFa7K3BWCVt8-FP9zeJsGBJLbRzKWN8vaajETh7fqNVbKt24ue5dEPEG-qcOvnoNemfbDurhHPFTjfHbglAUeEAhMBJteqvzWzCMBjZVXvTr3diu_z4hn_va7yEJODp4AWA1ghrS38ngiV2EXDw20apuYBko6rb"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-accent-fill border-2 border-surface rounded-full"></span>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin pt-2 flex flex-col gap-4">
+<!-- 2. Hero Focal Card -->
+<section class="w-full rounded-[20px] p-5 text-on-primary relative overflow-hidden custom-shadow" style="background: linear-gradient(135deg, #0D7C50 0%, #0B734A 100%);">
+<!-- Subtle background clinic geometric aura -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-surface/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col">
+<div class="flex items-baseline gap-2.5">
+<span class="font-display text-[44px] leading-none font-bold tracking-tight text-surface">8</span>
+<span class="font-title text-[18px] font-semibold tracking-tight text-surface">client sessions today</span>
+</div>
+<p class="font-caption text-caption text-surface/85 mt-2 flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-support-blush"></span>
+            5 filler, 2 hair, 1 makeup
+          </p>
+<div class="mt-4 pt-3.5 border-t border-surface/15 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-surface/90">verified_user</span>
+<span class="font-caption text-caption text-surface/90 font-medium">Dr. Arielle Dan · Active Shift</span>
+</div>
+<span class="font-caption text-caption font-semibold bg-surface/20 px-2 py-0.5 rounded-full backdrop-blur-sm">Live</span>
+</div>
+</div>
+</section>
+<!-- 3. Secondary Stat Tiles (2-column grid) -->
+<section class="grid grid-cols-2 gap-3">
+<!-- Left Tile -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-caption text-caption text-text-secondary leading-tight">Shared previews this week</span>
+<span class="w-6 h-6 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[15px]">send</span>
+</span>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<span class="font-display text-[26px] leading-none font-semibold text-text-primary">23</span>
+<span class="inline-flex items-center text-[11px] font-semibold text-accent-fill bg-accent-tint px-1.5 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[12px] mr-0.5">trending_up</span>+14%
+            </span>
+</div>
+</div>
+<!-- Right Tile -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="font-caption text-caption text-text-secondary leading-tight">Booked after preview</span>
+<span class="w-6 h-6 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[15px]">event_available</span>
+</span>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<span class="font-display text-[26px] leading-none font-semibold text-text-primary">61%</span>
+<span class="inline-flex items-center text-[11px] font-semibold text-accent-fill bg-accent-tint px-1.5 py-0.5 rounded-full">
+              +8% wk
+            </span>
+</div>
+</div>
+</section>
+<!-- 4. Quick Actions / Filter bar -->
+<section class="flex items-center gap-2 pt-1">
+<button class="h-[34px] px-3.5 rounded-full bg-accent-tint text-accent-fill font-label text-caption font-semibold flex items-center transition-transform active:scale-95">
+          All (8)
+        </button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface text-text-secondary border border-border-hairline font-label text-caption font-medium hover:text-accent-fill transition-colors">
+          Upcoming (6)
+        </button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface text-text-secondary border border-border-hairline font-label text-caption font-medium hover:text-accent-fill transition-colors">
+          Completed (2)
+        </button>
+</section>
+<!-- 5. Sessions Section -->
+<section class="flex flex-col gap-2.5 pb-3">
+<!-- Section Header -->
+<div class="flex justify-between items-center pt-1">
+<div class="flex items-center gap-2">
+<h2 class="font-display text-title font-semibold text-text-primary">Sessions</h2>
+<span class="font-caption text-caption text-text-tertiary">· Tel Aviv</span>
+</div>
+<div class="flex items-center gap-1.5 bg-accent-tint/60 text-accent-fill px-2.5 py-1 rounded-full border border-border-hairline">
+<span class="w-2 h-2 rounded-full bg-accent-fill animate-pulse"></span>
+<span class="font-caption text-caption font-semibold">Next at 10:30</span>
+</div>
+</div>
+<!-- Sessions List -->
+<div class="flex flex-col gap-2.5">
+<!-- Row 1: Noa Levi -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex items-center justify-between transition-all hover:border-accent-fill/40 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img alt="Noa Levi portrait" class="w-11 h-11 rounded-full object-cover border border-border-hairline" src="https://lh3.googleusercontent.com/aida/AEtjO1V4eeRsKGSqBR_lHdFXtapEUDw-AF82s--XTB6TTLfMg3v_5F9FZwk15SJ2l6VYGDIAz8lKznMm5WGU34Zmsj-mDaKt8gN25YE93KtCJfGOm0vgeJD-niTHuu_xX-SAXm_2k0DGr-yzhNc6nUtR0AGUwebbMR_ksDnlTNQJ9AFwCwipORF7TWfKgH9LZgPni_sLmqSkwMPN8rVKgQU3pPUjxORHLRZo0ugZwnxqervSP6vKibUH_dHYJBw8"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-accent-fill rounded-full border-2 border-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[9px] text-surface">check</span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title text-[15px] font-semibold text-text-primary truncate">Noa Levi</span>
+<span class="bg-accent-tint text-accent-fill text-[11px] font-semibold px-2 py-0.5 rounded-full shrink-0">Shared</span>
+</div>
+<p class="font-caption text-caption text-text-secondary truncate mt-0.5">
+<span class="font-semibold text-text-primary">10:30</span> · Lip filler 1.0 ml preview
+                </p>
+</div>
+</div>
+<div class="flex items-center pl-2 shrink-0">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Row 2: Maya Cohen -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex items-center justify-between transition-all hover:border-accent-fill/40 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img alt="Maya Cohen portrait" class="w-11 h-11 rounded-full object-cover border border-border-hairline" src="https://lh3.googleusercontent.com/aida/AEtjO1V_nY6o2zJ8vZJyOTyZ_eAUa6RWBLRTPrO8fCetBKlZbyd42YvZ4xAlp-a-nzql0I1uciPjvos7PkczdPXTfAhx7xTz8X8pq3o5eXfAL9ywPcmM1yaTMSElGTxWWDbcPkU3Po3bgpDm2l0vTmv9xAdgWPn4WZsfFxWpVTs_Jm5jFfpqkj9mZaks-vkrLXMY4xXOE0N9ywhRN1nL_vhwKVisjfoyAyayy_TlxjF-r0aLki0K2gChfjkxB-Q"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title text-[15px] font-semibold text-text-primary truncate">Maya Cohen</span>
+<span class="bg-surface-alt text-text-secondary text-[11px] font-medium px-2 py-0.5 rounded-full shrink-0">In room</span>
+</div>
+<p class="font-caption text-caption text-text-secondary truncate mt-0.5">
+<span class="font-semibold text-text-primary">11:15</span> · Cheek filler
+                </p>
+</div>
+</div>
+<div class="flex items-center pl-2 shrink-0">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Row 3: Yael Mizrahi -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex items-center justify-between transition-all hover:border-accent-fill/40 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img alt="Yael Mizrahi portrait" class="w-11 h-11 rounded-full object-cover border border-border-hairline" src="https://lh3.googleusercontent.com/aida/AEtjO1X15ZtN6fB-2-fSvXTAdJAKocpUhMJeRGL0emChd1VXsfZlkU7E1zNu4hamJirvYmwjgvMzZ1WvS573pWIE-oInJs-yCEGGtxQJkUS_MWrgs48Bhkej0fZyMrU3VvhN2lTEzoZ2B_sWDMrEbrAH0oCz-eJoVAhdrCbCX-NVlfRWkULM5a0y9MEUGfw3h73-5XTeNm_eLPJ1h1PZ8L00YhiqoNnvSAbxQsFxW1hDJMQVnfZr5ExBLMUAsmsx"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title text-[15px] font-semibold text-text-primary truncate">Yael Mizrahi</span>
+</div>
+<p class="font-caption text-caption text-text-secondary truncate mt-0.5">
+<span class="font-semibold text-text-primary">12:00</span> · Soft bob + chestnut
+                </p>
+</div>
+</div>
+<div class="flex items-center pl-2 shrink-0">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Row 4: Tamar Ben-David -->
+<div class="bg-surface rounded-[20px] p-3.5 border border-border-hairline custom-shadow flex items-center justify-between transition-all hover:border-accent-fill/40 cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img alt="Tamar Ben-David portrait" class="w-11 h-11 rounded-full object-cover border border-border-hairline" src="https://lh3.googleusercontent.com/aida/AEtjO1Wdhu9Yw-49DP9aHUXRT-uLYIFOPySzjBF7lknu76YqfFCA8XdG3XAqrWLvCg_7QgvmL7GUTa-8wLcFBDTPJbM4mBc74DPuRNF-IXXaRXcdFCB43yXo90oeasUfsJm0opIL-LES3-rcnQR2YmZfTbrUfvV3n4VzPY_2i3NBMaWP5FVNJHjN-U9XLIbr7yxVb6RHZqrvo5I50SGayvfsMtCn7LAYDA0ilDcWRE9RCQaCFvJZXjHKg59UinGH"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-title text-[15px] font-semibold text-text-primary truncate">Tamar Ben-David</span>
+</div>
+<p class="font-caption text-caption text-text-secondary truncate mt-0.5">
+<span class="font-semibold text-text-primary">13:30</span> · Forehead Botox 20 units
+                </p>
+</div>
+</div>
+<div class="flex items-center pl-2 shrink-0">
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Clinical Disclaimer note -->
+<div class="pb-4 flex items-center justify-center gap-1.5 text-text-secondary/70">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span class="font-caption text-[12px]">AI-generated simulation, not a guaranteed medical outcome.</span>
+</div>
+</main>
+<!-- 6. Shared Bottom Navigation Tab Bar (Fixed to 393px frame) -->
+<nav class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-hairline px-6 py-2 z-30 flex justify-between items-center">
+<!-- Tab 1: Studio -->
+<a class="flex flex-col items-center gap-1 group py-1" href="#">
+<div class="w-10 h-7 flex items-center justify-center rounded-full group-hover:bg-accent-tint/50 transition-colors">
+<span class="material-symbols-outlined text-[24px] text-text-tertiary group-hover:text-accent-fill">auto_awesome</span>
+</div>
+<span class="font-caption text-[12px] font-medium text-text-tertiary group-hover:text-accent-fill">Studio</span>
+</a>
+<!-- Tab 2: History -->
+<a class="flex flex-col items-center gap-1 group py-1" href="#">
+<div class="w-10 h-7 flex items-center justify-center rounded-full group-hover:bg-accent-tint/50 transition-colors">
+<span class="material-symbols-outlined text-[24px] text-text-tertiary group-hover:text-accent-fill">photo_library</span>
+</div>
+<span class="font-caption text-[12px] font-medium text-text-tertiary group-hover:text-accent-fill">History</span>
+</a>
+<!-- Tab 3: Clinic (ACTIVE) -->
+<a class="flex flex-col items-center gap-1 py-1" href="#">
+<div class="w-12 h-7 bg-accent-tint rounded-full flex items-center justify-center text-accent-fill">
+<span class="material-symbols-outlined text-[24px] text-accent-fill" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+<span class="font-caption text-[12px] font-semibold text-accent-fill">Clinic</span>
+</a>
+<!-- Tab 4: Account -->
+<a class="flex flex-col items-center gap-1 group py-1" href="#">
+<div class="w-10 h-7 flex items-center justify-center rounded-full group-hover:bg-accent-tint/50 transition-colors">
+<span class="material-symbols-outlined text-[24px] text-text-tertiary group-hover:text-accent-fill">person</span>
+</div>
+<span class="font-caption text-[12px] font-medium text-text-tertiary group-hover:text-accent-fill">Account</span>
+</a>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-text-primary/20 rounded-full z-40 pointer-events-none"></div>
+</div>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Studio Home</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&family=Spectral:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "status-danger-text": "#CE2020",
+            "surface-container-low": "#eff5ee",
+            "on-secondary-fixed-variant": "#005232",
+            "tertiary": "#a0383d",
+            "on-error-container": "#93000a",
+            "accent-tint": "#E2F4EC",
+            "on-secondary-fixed": "#002112",
+            "tertiary-fixed": "#ffdad8",
+            "status-info-bg": "#E2EFEA",
+            "status-danger-bg": "#FBE5E5",
+            "status-warning-text": "#AA4F09",
+            "support-blush": "#F59BD0",
+            "accent-fill": "#0D7C50",
+            "on-primary-container": "#f6fff5",
+            "on-tertiary-fixed": "#410008",
+            "on-primary-fixed": "#002111",
+            "on-surface": "#171d19",
+            "background": "#F4FCF9",
+            "surface-container": "#e9f0e8",
+            "surface-alt": "#EAF6F0",
+            "status-info-text": "#0D774D",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#c05053",
+            "surface-container-high": "#e3eae2",
+            "secondary": "#006c44",
+            "inverse-surface": "#2b322d",
+            "error-container": "#ffdad6",
+            "surface-tint": "#006d43",
+            "primary-container": "#008654",
+            "outline-variant": "#bccabe",
+            "status-warning-bg": "#F6EAE1",
+            "secondary-fixed-dim": "#7ad9a5",
+            "primary-fixed": "#7dfab7",
+            "surface-container-highest": "#dde4dd",
+            "text-secondary": "#46594F",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#96f6c0",
+            "text-primary": "#0C1F18",
+            "on-primary-fixed-variant": "#005232",
+            "surface-variant": "#dde4dd",
+            "on-surface-variant": "#3d4a41",
+            "inverse-primary": "#5fdd9d",
+            "control-border": "#6DA074",
+            "surface": "#FFFFFF",
+            "on-secondary-container": "#007148",
+            "primary": "#006a42",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#5fdd9d",
+            "surface-bright": "#f4fbf3",
+            "on-tertiary-fixed-variant": "#83232a",
+            "inverse-on-surface": "#ecf3eb",
+            "surface-dim": "#d5dcd4",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "on-background": "#171d19",
+            "text-tertiary": "#5A6A60",
+            "border-hairline": "#DCEAE3",
+            "on-tertiary-container": "#fffbff",
+            "status-success-text": "#0E7C3A",
+            "on-tertiary": "#ffffff",
+            "support-pink": "#F555B4",
+            "status-success-bg": "#E3F4E9",
+            "accent-fill-pressed": "#0B734A",
+            "accent-fill-disabled": "#B9DCCB",
+            "secondary-container": "#93f3bd",
+            "outline": "#6d7a70",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "title": ["Public Sans"],
+            "display": ["Spectral"],
+            "label": ["Public Sans"],
+            "body": ["Public Sans"],
+            "caption": ["Public Sans"]
+          },
+          "fontSize": {
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .mirra-ambient-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 24, 0.04), 0 8px 24px rgba(12, 31, 24, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-high flex justify-center items-center min-h-screen p-0 sm:p-4 text-text-primary antialiased selection:bg-accent-tint selection:text-accent-fill font-body">
+<!-- Mobile Frame (393x852) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col overflow-hidden shadow-2xl sm:rounded-[48px] border border-border-hairline">
+<!-- iOS Status Bar -->
+<header class="pt-3 px-7 flex justify-between items-center z-30 shrink-0 text-text-primary select-none">
+<span class="font-title text-caption tracking-tight">9:41</span>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[17px] text-text-primary" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px] text-text-primary" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[19px] text-text-primary" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- Scrollable Canvas -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-28 pt-2">
+<!-- User Header Area -->
+<section class="px-margin pt-2 pb-4 flex items-center justify-between">
+<div class="flex flex-col">
+<h1 class="font-display text-display text-text-primary font-medium tracking-tight">Hi Noa</h1>
+<div class="mt-1 flex items-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full font-label text-caption bg-accent-tint text-accent-fill">
+              Trial · 2 days left
+            </span>
+</div>
+</div>
+<div class="relative shrink-0">
+<img alt="Noa Levi profile portrait" class="w-9 h-9 rounded-full object-cover border border-border-hairline shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvlVUVgb8Wbpjv85ouXZzgcrtqlHUoYDGnZPGPNsuOtPWOLg6YJGcCmPMn78Xgzi12U37_ZbvCovRYz-VSg1F2Wx0FQL2dITJHe099LUjWYhR-Zgz8JIrHlUfLOVKMbfuRIdZ3oKjkRuO97aDFqizxzRIRhcDnBlexfWx3Jf8J9F8UKvXIDsMbuJOry_ed9jnUWiCdYw_bBsDjLXoDH1L5-BQLF45aJ4P_TylFf_8Mi90OAbchmoLIz7YW21dE-nkoRdbkTKY4A03-"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-accent-fill rounded-full ring-2 ring-background"></span>
+</div>
+</section>
+<!-- Focal Hero Card -->
+<section class="px-margin mb-6">
+<div class="relative w-full h-[290px] rounded-[20px] overflow-hidden mirra-ambient-shadow border border-border-hairline group">
+<!-- Background Real Photography -->
+<img alt="Editorial aesthetic preview" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA9o6iZaN_OOjXpcHkMcrlRJBb4sl-K4-nUNFAMOw2Ot8Urg--3mmKrSc-Y7Z5Y-JltEDkMhRil8i1fVUeX2zL7WHMfGOQmkIQa4nCSwJ1-7y6dwDJIlNxedN69AFGMOtyvoF3PfvhsOFt7laMMUcuaq57AJEemhM6KOBYAJU4480558mlSz2Ct68hEcdpwbf3zPBvmrfc0B24YAFxj_sbrZlHYy0vC5_a-TZdV0plyGOpOcPgPhsaT_ZNEuCporZUH_sHysAE7nIK"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/95 via-text-primary/40 to-transparent"></div>
+<!-- Card Content -->
+<div class="absolute bottom-0 inset-x-0 p-5 flex flex-col justify-end">
+<h2 class="font-display text-display text-on-primary font-semibold leading-tight">New preview</h2>
+<p class="font-label text-label text-on-primary/90 mt-1 mb-4">Upload a selfie and try a new look in 20 seconds</p>
+<button class="w-full h-11 bg-surface rounded-full flex items-center justify-center space-x-2 text-text-primary hover:bg-surface-bright active:scale-[0.98] transition-all mirra-ambient-shadow font-title text-label">
+<span class="material-symbols-outlined text-[19px] text-accent-fill" data-icon="photo_camera">photo_camera</span>
+<span class="text-text-primary font-semibold">Take or upload photo</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: What would you like to try? -->
+<section class="mb-6">
+<div class="px-margin mb-3 flex items-center justify-between">
+<h3 class="font-display text-title text-text-primary font-semibold">What would you like to try?</h3>
+</div>
+<!-- 3 Category Tiles -->
+<div class="flex space-x-3 overflow-x-auto no-scrollbar px-margin">
+<!-- Tile 1: Hairstyle -->
+<div class="w-[110px] shrink-0 flex flex-col bg-surface rounded-[16px] border border-border-hairline p-2 mirra-ambient-shadow active:scale-[0.97] transition-transform cursor-pointer">
+<div class="w-full h-[106px] rounded-[12px] overflow-hidden mb-2 bg-surface-alt">
+<img alt="Hairstyle category preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgW-mn6zMFtYtjnMUCI2KRwMGy3XvAEw0Zh_dG1OWlHJqMrNBcxpbt5W-m9Qsu_ZNm_LUp7-F8u5cobKf2dGO4LDJnG7KDcfI6SKhdIzgZ_VVuLXAAtJ7FYd3cn6vVuHMxkMYpVTAFRcv6kDWdphMgQk2rv2PPu5Q2utYSmkFfVFbnmsU8xw6DIFi115IRpvps9vIzz4ZlzMhOYDXdX0BWZxhsVcUn6XuSsf7ruzQ01_LWkL7F9RMNAmDIzUKkhHqxBHkO3SUsDpNy"/>
+</div>
+<span class="font-label text-label text-text-primary font-bold text-center pb-0.5 truncate">Hairstyle</span>
+</div>
+<!-- Tile 2: Makeup -->
+<div class="w-[110px] shrink-0 flex flex-col bg-surface rounded-[16px] border border-border-hairline p-2 mirra-ambient-shadow active:scale-[0.97] transition-transform cursor-pointer">
+<div class="w-full h-[106px] rounded-[12px] overflow-hidden mb-2 bg-surface-alt">
+<img alt="Makeup category preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwfWRWY7ppbNXIoR32tX-hne3hVmCJpnY6lgDWsLIc6hR0ugcPUX4QsPXz_HQQ3_gcz3EBwn4rRi7Yn5XCqp304GAYB3VbptWs1iiiVdQxKrNK3gjFDhdl-hQQGufrT_N-idDmBJch6LSFxxe58wfwhywm7ZR2oMyxjLDQ-X4QAxvQe5ln3Jx4rrPJrQ7EXTfgol1_ApuruKMtPaT3ADJWFSpU0gRPRbvi8rWHIlV4QRtGq1wZa31HHRkBl2Yaa4gGNXtJkTAN0tNt"/>
+</div>
+<span class="font-label text-label text-text-primary font-bold text-center pb-0.5 truncate">Makeup</span>
+</div>
+<!-- Tile 3: Filler & Botox -->
+<div class="w-[110px] shrink-0 flex flex-col bg-surface rounded-[16px] border border-border-hairline p-2 mirra-ambient-shadow active:scale-[0.97] transition-transform cursor-pointer">
+<div class="w-full h-[106px] rounded-[12px] overflow-hidden mb-2 bg-surface-alt">
+<img alt="Filler and Botox category preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfZ75UhtVqiRSoVlzUbBGW8uZjewSOB3HYp0sAt3_HOsQ1WDCDHf03p1DfKC5vPYqkzvplga2WbIiiZM2vYnfpT054PHJEnA0LEoz8NyTaiq38vt4x934PqpRnPIHY1sgS0AcG8dfFhXXq-wIRPywO69RbfgcvavQjvntYqM3w1qXz2NQoB1-tbPGxtAaczqOAYrbOx8TOB6bxMLP9DpYuGK87LX-dckW6Zu5Sj3P_y63dUKclhZAGPI2iCC5hpjs7YN_wrBb5QzPX"/>
+</div>
+<span class="font-label text-label text-text-primary font-bold text-center pb-0.5 truncate">Filler & Botox</span>
+</div>
+</div>
+</section>
+<!-- Section: Recent previews -->
+<section class="px-margin mb-4">
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-display text-title text-text-primary font-semibold">Recent previews</h3>
+<button class="font-label text-label text-accent-fill font-semibold hover:opacity-80 transition-opacity">See all</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Item 1 -->
+<div class="bg-surface rounded-[16px] border border-border-hairline p-2.5 mirra-ambient-shadow flex flex-col">
+<div class="relative w-full h-[142px] rounded-[12px] overflow-hidden mb-2.5 bg-surface-alt">
+<img alt="Soft balayage simulation preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgW-mn6zMFtYtjnMUCI2KRwMGy3XvAEw0Zh_dG1OWlHJqMrNBcxpbt5W-m9Qsu_ZNm_LUp7-F8u5cobKf2dGO4LDJnG7KDcfI6SKhdIzgZ_VVuLXAAtJ7FYd3cn6vVuHMxkMYpVTAFRcv6kDWdphMgQk2rv2PPu5Q2utYSmkFfVFbnmsU8xw6DIFi115IRpvps9vIzz4ZlzMhOYDXdX0BWZxhsVcUn6XuSsf7ruzQ01_LWkL7F9RMNAmDIzUKkhHqxBHkO3SUsDpNy"/>
+<!-- AI Simulation Chip -->
+<div class="absolute bottom-2 left-2 bg-text-primary/75 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center space-x-1 shadow-sm">
+<span class="material-symbols-outlined text-[11px] text-on-primary" data-icon="sparkles" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+<span class="font-caption text-[11px] text-on-primary font-medium">AI simulation</span>
+</div>
+</div>
+<div class="px-0.5 pb-0.5">
+<h4 class="font-label text-label text-text-primary font-semibold truncate leading-tight">Soft balayage</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">Oct 26</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface rounded-[16px] border border-border-hairline p-2.5 mirra-ambient-shadow flex flex-col">
+<div class="relative w-full h-[142px] rounded-[12px] overflow-hidden mb-2.5 bg-surface-alt">
+<img alt="Lip filler simulation preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfZ75UhtVqiRSoVlzUbBGW8uZjewSOB3HYp0sAt3_HOsQ1WDCDHf03p1DfKC5vPYqkzvplga2WbIiiZM2vYnfpT054PHJEnA0LEoz8NyTaiq38vt4x934PqpRnPIHY1sgS0AcG8dfFhXXq-wIRPywO69RbfgcvavQjvntYqM3w1qXz2NQoB1-tbPGxtAaczqOAYrbOx8TOB6bxMLP9DpYuGK87LX-dckW6Zu5Sj3P_y63dUKclhZAGPI2iCC5hpjs7YN_wrBb5QzPX"/>
+<!-- AI Simulation Chip -->
+<div class="absolute bottom-2 left-2 bg-text-primary/75 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center space-x-1 shadow-sm">
+<span class="material-symbols-outlined text-[11px] text-on-primary" data-icon="sparkles" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+<span class="font-caption text-[11px] text-on-primary font-medium">AI simulation</span>
+</div>
+</div>
+<div class="px-0.5 pb-0.5">
+<h4 class="font-label text-label text-text-primary font-semibold truncate leading-tight">Lip filler 0.5 ml</h4>
+<p class="font-caption text-caption text-text-secondary mt-0.5">Oct 25</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mandatory Disclaimer -->
+<section class="px-margin pt-1 pb-2">
+<div class="flex items-start space-x-1.5 text-text-secondary">
+<span class="material-symbols-outlined text-[16px] text-text-secondary mt-[1px] shrink-0" data-icon="info">info</span>
+<p class="font-caption text-caption text-text-secondary leading-relaxed">
+            AI-generated simulation, not a guaranteed medical outcome.
+          </p>
+</div>
+</section>
+</div>
+<!-- Fixed Bottom Tab Bar -->
+<nav class="absolute bottom-0 inset-x-0 bg-surface border-t border-border-hairline h-[78px] px-6 pt-2 pb-5 flex items-center justify-between z-40 select-none">
+<!-- Tab 1: Studio (Active) -->
+<button class="flex flex-col items-center justify-center flex-1 group">
+<div class="w-12 h-7 rounded-full bg-accent-tint flex items-center justify-center mb-0.5 transition-colors">
+<span class="material-symbols-outlined text-[21px] text-accent-fill" data-icon="sparkles" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+</div>
+<span class="font-label text-caption font-semibold text-accent-fill">Studio</span>
+</button>
+<!-- Tab 2: History -->
+<button class="flex flex-col items-center justify-center flex-1 group">
+<div class="w-12 h-7 rounded-full flex items-center justify-center mb-0.5 text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]" data-icon="schedule">schedule</span>
+</div>
+<span class="font-label text-caption font-medium text-text-tertiary group-hover:text-text-primary">History</span>
+</button>
+<!-- Tab 3: Clinic -->
+<button class="flex flex-col items-center justify-center flex-1 group">
+<div class="w-12 h-7 rounded-full flex items-center justify-center mb-0.5 text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]" data-icon="domain">domain</span>
+</div>
+<span class="font-label text-caption font-medium text-text-tertiary group-hover:text-text-primary">Clinic</span>
+</button>
+<!-- Tab 4: Account -->
+<button class="flex flex-col items-center justify-center flex-1 group">
+<div class="w-12 h-7 rounded-full flex items-center justify-center mb-0.5 text-text-tertiary group-hover:text-text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]" data-icon="person">person</span>
+</div>
+<span class="font-label text-caption font-medium text-text-tertiary group-hover:text-text-primary">Account</span>
+</button>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="absolute bottom-1 inset-x-0 flex justify-center pointer-events-none z-50">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Mirra - Welcome</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#002111",
+            "on-primary-container": "#f6fff5",
+            "error": "#ba1a1a",
+            "primary-container": "#008654",
+            "on-primary": "#ffffff",
+            "status-danger-text": "#CE2020",
+            "secondary": "#006c44",
+            "accent-fill": "#0D7C50",
+            "surface-container-low": "#eff5ee",
+            "on-surface-variant": "#3d4a41",
+            "surface-variant": "#dde4dd",
+            "status-danger-bg": "#FBE5E5",
+            "status-warning-bg": "#F6EAE1",
+            "on-secondary-fixed": "#002112",
+            "inverse-on-surface": "#ecf3eb",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#5fdd9d",
+            "accent-fill-disabled": "#B9DCCB",
+            "tertiary-container": "#c05053",
+            "on-secondary-fixed-variant": "#005232",
+            "status-success-text": "#0E7C3A",
+            "on-tertiary-fixed": "#410008",
+            "on-tertiary": "#ffffff",
+            "on-background": "#171d19",
+            "surface": "#FFFFFF",
+            "border-hairline": "#DCEAE3",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "tertiary-fixed": "#ffdad8",
+            "background": "#F4FCF9",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#96f6c0",
+            "tertiary": "#a0383d",
+            "on-tertiary-container": "#fffbff",
+            "surface-alt": "#EAF6F0",
+            "surface-container-high": "#e3eae2",
+            "secondary-container": "#93f3bd",
+            "primary-fixed-dim": "#5fdd9d",
+            "surface-container-highest": "#dde4dd",
+            "error-container": "#ffdad6",
+            "control-border": "#6DA074",
+            "status-info-bg": "#E2EFEA",
+            "primary": "#006a42",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#7dfab7",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-surface": "#171d19",
+            "accent-fill-pressed": "#0B734A",
+            "on-error": "#ffffff",
+            "text-secondary": "#46594F",
+            "outline": "#6d7a70",
+            "on-primary-fixed-variant": "#005232",
+            "surface-dim": "#d5dcd4",
+            "support-blush": "#F59BD0",
+            "surface-bright": "#f4fbf3",
+            "status-warning-text": "#AA4F09",
+            "status-success-bg": "#E3F4E9",
+            "inverse-surface": "#2b322d",
+            "text-tertiary": "#5A6A60",
+            "surface-tint": "#006d43",
+            "surface-container": "#e9f0e8",
+            "secondary-fixed-dim": "#7ad9a5",
+            "text-primary": "#0C1F18",
+            "support-pink": "#F555B4",
+            "accent-tint": "#E2F4EC",
+            "status-info-text": "#0D774D",
+            "outline-variant": "#bccabe",
+            "on-secondary-container": "#007148"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "20px",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "display": [
+              "Spectral"
+            ],
+            "caption": [
+              "Public Sans"
+            ],
+            "label": [
+              "Public Sans"
+            ],
+            "body": [
+              "Public Sans"
+            ],
+            "title": [
+              "Public Sans"
+            ]
+          },
+          "fontSize": {
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .soft-card-shadow {
+      box-shadow: 0 1px 2px rgba(12, 31, 24, 0.04), 0 8px 24px rgba(12, 31, 24, 0.06);
+    }
+
+    .pill-tab-shadow {
+      box-shadow: 0 1px 4px rgba(12, 31, 24, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-high flex justify-center items-center min-h-screen p-0 m-0 antialiased font-body selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Screen Container (393px × 852px) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col justify-between overflow-hidden shadow-2xl rounded-[44px] border border-border-hairline">
+<!-- Top Half: Hero Photographic Container (approx 46% height) -->
+<section class="relative w-full h-[395px] flex-shrink-0 rounded-b-[32px] overflow-hidden bg-surface-alt">
+<!-- Hero Real Image -->
+<img alt="Mirra patient preview" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2JnouBpxvhuj7QqeJie5auBule5gdwIlyi2cidt2T0E0VTiY0gdn2xpKuubUd0Ba3hgVoc9S4EOrKKjCOOEpxyGq074eGvBxMNXjB5rGfWHY2V8di9Vzx4cHdi3kUYXZNptBbp837aiAGPS_9MXEwI4tQitTJe9Uv0FzR3zdw7KhDqESqRQu8gLIf2oGU5_K-obwDPp4WOAeKn3Ag_KRw3ZB4agIQgFAZsDjSQoGQOyAKhRlfrof7R10WXzXJRQgV8x2GGGXwIjLc"/>
+<!-- Soft Clinical Gradient Vignette Overlay -->
+<div class="absolute inset-0 bg-gradient-to-b from-text-primary/25 via-transparent to-text-primary/30 pointer-events-none"></div>
+<!-- Top Status Bar Area & Header Overlay -->
+<div class="absolute top-0 left-0 w-full pt-12 px-5 flex items-center justify-between z-10">
+<!-- Refined Glassmorphic App Mark & Brand Name Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface/85 backdrop-blur-md border border-white/60 shadow-sm">
+<!-- Arch/Mirror Organic Symbol -->
+<div class="w-5 h-5 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill">
+<svg class="w-3.5 h-3.5" fill="none" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 2C4.68629 2 2 4.91015 2 8.5C2 12.0899 4.68629 14 8 14C11.3137 14 14 12.0899 14 8.5C14 4.91015 11.3137 2 8 2Z" stroke="#0D7C50" stroke-width="1.5"></path>
+<ellipse cx="8" cy="8.2" rx="3.5" ry="4.2" stroke="#10A56A" stroke-dasharray="1 1.5" stroke-width="1.1"></ellipse>
+</svg>
+</div>
+<span class="font-display font-semibold text-text-primary text-[17px] tracking-tight leading-none pt-0.5">Mirra</span>
+</div>
+<!-- Help Link (Shared Action) -->
+<button class="inline-flex items-center justify-center px-3 py-1.5 rounded-full bg-surface/80 backdrop-blur-md border border-white/60 text-text-primary font-label text-label hover:bg-surface transition-colors duration-150 active:opacity-80" type="button">
+          Help
+        </button>
+</div>
+<!-- Bottom Floating Badge within Hero: AI Clinical Precision -->
+<div class="absolute bottom-4 left-5 z-10">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-text-primary/75 backdrop-blur-md text-surface text-[12px] font-caption tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed" data-icon="auto_awesome">auto_awesome</span>
+<span>AI simulation</span>
+</div>
+</div>
+</section>
+<!-- Bottom Half: Content & Actions Container -->
+<section class="flex-1 flex flex-col justify-between px-margin pt-4 pb-8">
+<!-- Headline & Value Proposition -->
+<div class="space-y-2">
+<h1 class="font-display text-display text-text-primary tracking-tight leading-[38px]">
+          See it before you book it
+        </h1>
+<p class="font-body text-[15px] leading-[22px] text-text-secondary">
+          Realistic previews of hair, makeup and aesthetic treatments on your own photo.
+        </p>
+</div>
+<!-- Interactive Controls Group -->
+<div class="space-y-3.5 my-auto">
+<!-- Language Segmented Control -->
+<div aria-label="Language selector" class="w-full h-[42px] bg-surface-alt rounded-full p-1 border border-border-hairline flex items-center relative" role="radiogroup">
+<!-- Active: English -->
+<button aria-checked="true" class="flex-1 h-full rounded-full bg-surface text-accent-fill font-label text-label font-medium pill-tab-shadow flex items-center justify-center transition-all duration-150" role="radio" type="button">
+            English
+          </button>
+<!-- Inactive: Hebrew -->
+<button aria-checked="false" class="flex-1 h-full rounded-full text-text-tertiary font-label text-label font-normal hover:text-text-primary flex items-center justify-center transition-all duration-150" role="radio" type="button">
+            עברית
+          </button>
+</div>
+<!-- Age Confirmation Row -->
+<label class="flex items-center gap-3 cursor-pointer select-none py-1 group">
+<input checked="" class="sr-only peer" id="age-confirmation" type="checkbox"/>
+<div class="w-[22px] h-[22px] rounded-[6px] bg-accent-fill border border-accent-fill flex items-center justify-center peer-checked:bg-accent-fill peer-focus:ring-2 peer-focus:ring-accent-tint transition-all duration-150">
+<span class="material-symbols-outlined text-white text-[16px]" data-icon="check">check</span>
+</div>
+<span class="font-label text-label text-text-primary font-medium tracking-tight">
+            I confirm I am 18 or older
+          </span>
+</label>
+</div>
+<!-- Bottom CTAs & Account Links -->
+<div class="space-y-3.5">
+<!-- Primary Button -->
+<button class="w-full h-[52px] rounded-full bg-accent-fill text-on-primary font-label text-body font-semibold flex items-center justify-center gap-2 hover:bg-accent-fill-pressed active:opacity-90 transition-all duration-150 soft-card-shadow" type="button">
+<span>Get started</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Secondary Sign-in Anchor -->
+<div class="text-center font-caption text-caption text-text-secondary">
+          Already have an account? 
+          <a class="text-accent-fill font-semibold underline underline-offset-2 ml-1 hover:text-accent-fill-pressed transition-colors" href="#">
+            Sign in
+          </a>
+</div>
+</div>
+</section>
+<!-- iOS Safe Area Bottom Home Indicator Bar -->
+<div class="w-full flex justify-center pb-2 pointer-events-none">
+<div class="w-32 h-1 bg-text-primary/20 rounded-full"></div>
+</div>
+</main>
+</body></html>

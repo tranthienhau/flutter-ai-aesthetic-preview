@@ -1,0 +1,432 @@
+{
+  "title": "Mirra",
+  "slug": "mirra-aesthetic-preview",
+  "domain": "health",
+  "style": "bright",
+  "allow3D": false,
+  "features": [
+    "Hebrew + English UI with full RTL layout, language picker on first launch",
+    "18+ age gate before account creation",
+    "Sign up starts a 3-day free trial automatically",
+    "Informed-consent screen before any photo is processed, with 'AI-generated simulation, not a guaranteed medical outcome' disclaimer",
+    "Guided photo capture / upload with lighting and framing checks, encrypted upload",
+    "AI hairstyle simulation (style + color presets)",
+    "AI makeup simulation (looks + intensity)",
+    "AI filler / Botox preview by treatment area (lips, cheeks, jawline, forehead, under-eye) with intensity in ml / units",
+    "Generative image pipeline (Gemini image edit or gpt-image-1) behind a secure backend, processing state",
+    "Before/after comparison slider with permanent 'AI simulation' label",
+    "Session history per client, save preview to clinic",
+    "Paywall after trial: monthly subscription via App Store / Google Play, restore purchases",
+    "Manage subscription with clear cancellation flow",
+    "Privacy center: privacy policy, delete individual photos, delete all data",
+    "Clinic admin view: today's client sessions, client history, treatment interest"
+  ],
+  "bannedTerms": [
+    "guaranteed result",
+    "diagnosis",
+    "body contouring",
+    "breast",
+    "surgery",
+    "prescription",
+    "insurance"
+  ],
+  "screenCount": 16,
+  "sharedComponents": {
+    "bottomTabBar": {
+      "tabs": [
+        "Studio",
+        "History",
+        "Clinic",
+        "Account"
+      ],
+      "icons": [
+        "sparkles",
+        "images",
+        "building-2",
+        "user-round"
+      ],
+      "note": "Flat white bar, hairline top border, rounded outline 24px icons, label 12px Public Sans. Active tab = accent fill #0D7C50 icon + label with small accent tint pill behind icon; inactive = text tertiary. Reused verbatim on every screen that shows nav."
+    },
+    "statusBar": "Top header: 59px safe area, then left screen title in Spectral 26/600, right a 36px round real photo avatar of the signed-in user. Under the title on Studio screens: small chip 'Trial - 2 days left' in accent tint.",
+    "aiLabel": "Every AI-generated image carries a small dark translucent pill on the bottom-left corner: sparkles icon + 'AI simulation' white 12px text. Never removed.",
+    "disclaimer": "Short disclaimer line used under every result: info icon + 'AI-generated simulation, not a guaranteed medical outcome.' 14px text secondary.",
+    "controls": "Primary button: pill 52px tall, #0D7C50 fill, white Public Sans 16/600 label, pressed #0B734A, disabled #B9DCCB. Secondary button: pill, white fill, 1.5px #0D7C50 border, accent label. Text input: 12px radius, 1px border, white fill, focus = 2px accent ring, error = danger border + helper. Card: 20px radius white, soft shadow. Chip: pill 34px, accent tint fill + #0D7C50 label when selected, white + border when not. Slider: accent track, white 24px thumb with soft shadow."
+  },
+  "screens": [
+    {
+      "name": "welcome",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Pick language and confirm 18+ before anything else.",
+      "content": "Top 50% real photo of a smiling woman in her 30s in a bright minimal aesthetic clinic, soft daylight, mint and blush accents. App wordmark area: small mark + 'Mirra' in Spectral. Headline 'See it before you book it', sub 'Realistic previews of hair, makeup and aesthetic treatments on your own photo.' Language segmented control 'English' (selected) / '\u05e2\u05d1\u05e8\u05d9\u05ea'. Checkbox row 'I confirm I am 18 or older'. Primary 'Get started'. Caption 'Already have an account? Sign in'."
+    },
+    {
+      "name": "sign-up",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Create account; 3-day free trial starts on sign up.",
+      "content": "Back arrow, title 'Create your account'. Focal card with soft accent->support gradient: '3 days free' big Spectral numeral, sub 'Full access to all previews. Then 79 ILS / month. Cancel anytime.' Inputs: Full name 'Noa Levi', Email 'noa.levi@gmail.com', Password. Buttons 'Continue with Apple' (black pill), 'Continue with Google' (white bordered pill). Primary 'Start free trial'. Caption 'No charge today. You will be reminded 24 hours before the trial ends.' Links Terms and Privacy Policy."
+    },
+    {
+      "name": "consent",
+      "group": "onboarding",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Informed consent before any photo is processed.",
+      "content": "Title 'Before we process your photo'. Focal warning-tint card with info icon: 'AI-generated simulation, not a guaranteed medical outcome. Real results depend on your anatomy and your practitioner.' Checklist of 4 consent rows each with a checkbox: 'My photo is sent encrypted to our AI provider only to create the preview', 'Photos are stored for 30 days unless I delete them sooner', 'I can delete my photos and data at any time', 'I am 18 or older and this is my own photo'. Link 'Read full privacy policy'. Primary 'I agree and continue' (disabled until all checked, shown enabled with all 4 checked)."
+    },
+    {
+      "name": "studio-home",
+      "group": "core",
+      "nav": "Studio",
+      "states": [
+        "default"
+      ],
+      "purpose": "Choose what to preview.",
+      "content": "Header 'Hi Noa' with chip 'Trial - 2 days left'. Focal hero card with soft gradient and real photo of a woman with glossy wavy hair: 'New preview' sub 'Upload a selfie and try a new look in 20 seconds' primary 'Take or upload photo'. Section 'What would you like to try?' 3 large tiles each with real photo: 'Hairstyle' (woman with a bob haircut), 'Makeup' (close-up soft glam makeup), 'Filler & Botox' (close-up of smooth lips and cheek profile). Row 'Recent previews' horizontal thumbnails with AI simulation pill: 'Soft balayage - Oct 26', 'Lip filler 0.5 ml - Oct 25'."
+    },
+    {
+      "name": "photo-upload",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Guided selfie capture or upload with quality checks.",
+      "content": "Top bar close X, title 'Your photo'. Large rounded portrait frame showing a real front-facing selfie of a woman in her 30s with neutral expression, an oval face guide outline in accent. Quality checklist row with green check icons: 'Face centered', 'Even lighting', 'No glasses or filters'. Two buttons side by side 'Retake' secondary and 'Upload from gallery' secondary. Lock caption 'Encrypted upload - only used for your preview'. Primary 'Use this photo'."
+    },
+    {
+      "name": "hairstyle",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Pick a hairstyle and color to simulate.",
+      "content": "Top bar back, title 'Hairstyle'. Small portrait thumbnail of the user's selfie top left. Segmented 'Style' (active) / 'Color'. Grid 2 columns of 6 style cards each a real photo of a woman's hairstyle with label: 'Long layers', 'Soft bob' (selected, accent border + check), 'Curtain bangs', 'Pixie', 'Beach waves', 'Sleek ponytail'. Color chips row: Natural, Honey blonde, Chestnut (selected), Copper, Ash. Primary 'Generate preview'. Caption '1 preview uses 1 credit - 28 left this month'."
+    },
+    {
+      "name": "filler-botox",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Choose treatment area and amount for a filler / Botox preview.",
+      "content": "Top bar back, title 'Filler & Botox'. Portrait real photo of user's face with 5 small numbered tappable dots on lips, cheeks, jawline, forehead, under-eye; lips dot selected in accent. Area chips: Lips (selected), Cheeks, Jawline, Forehead lines, Under-eye. Card 'Lip filler' with slider 'Volume' from 0.5 ml to 2 ml, value '1.0 ml' shown large in Spectral. Toggle row 'Natural look' on. Info line 'Your practitioner confirms the final plan in consultation.' Primary 'Generate preview'."
+    },
+    {
+      "name": "generating",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "loading"
+      ],
+      "purpose": "Processing state while the AI creates the preview.",
+      "content": "Full screen soft accent tint background. Center the user's selfie in a rounded frame with a subtle scanning shimmer bar. Focal text 'Creating your preview' in Spectral 26, sub 'Lip filler - 1.0 ml - usually 15-25 seconds'. Step list: 'Photo encrypted and uploaded' (check), 'Face mapped' (check), 'Generating simulation' (spinner), 'Quality check' (pending). Secondary 'Cancel'. Caption 'Your original photo is never altered.'"
+    },
+    {
+      "name": "result-compare",
+      "group": "core",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Before/after comparison of the AI preview.",
+      "content": "Top bar back, title 'Your preview', share icon. Focal large portrait before/after image split by a vertical white slider handle in the middle; left labelled 'Before', right labelled 'After' showing fuller lips; bottom-left dark pill 'AI simulation'. Below: chips 'Lip filler - 1.0 ml - Natural look'. Disclaimer line 'AI-generated simulation, not a guaranteed medical outcome.' Buttons row: 'Try another amount' secondary, 'Save to clinic' primary. Small text link 'Delete this preview'."
+    },
+    {
+      "name": "history",
+      "group": "core",
+      "nav": "History",
+      "states": [
+        "default",
+        "empty"
+      ],
+      "purpose": "All saved previews and sessions.",
+      "content": "Title 'History'. Filter chips All (selected), Hair, Makeup, Filler & Botox. Focal stat row '12 previews - 3 shared with Lumiere Clinic'. Grid 2 columns of preview cards each a real photo thumbnail with AI simulation pill, title and date: 'Soft bob + chestnut - Oct 26', 'Lip filler 1.0 ml - Oct 26', 'Soft glam makeup - Oct 24', 'Cheek filler 1.5 ml - Oct 22'. Each card shows a small 'Shared with clinic' tag where shared."
+    },
+    {
+      "name": "history-empty",
+      "group": "core",
+      "nav": "History",
+      "states": [
+        "empty"
+      ],
+      "purpose": "History before the first preview.",
+      "content": "Title 'History'. Center real photo of a makeup brush, compact mirror and a small plant on a soft mint linen surface. Headline 'No previews yet', sub 'Your previews are saved here for 30 days. You can delete them anytime.' Primary 'Create your first preview'."
+    },
+    {
+      "name": "paywall",
+      "group": "settings",
+      "nav": "none",
+      "states": [
+        "default"
+      ],
+      "purpose": "Trial ending, continue with monthly subscription.",
+      "content": "Close X top right. Top real photo of a calm modern clinic consultation chair with soft daylight. Focal headline 'Your free trial ends tomorrow' in Spectral. Plan card selected with accent border: 'Mirra Monthly - 79 ILS / month', bullets 'Unlimited hair and makeup previews', '30 filler & Botox previews per month', 'Share previews with your clinic'. Line 'Billed monthly through the App Store. Cancel anytime in Settings.' Primary 'Continue for 79 ILS / month'. Links 'Restore purchases', 'Terms', 'Privacy'."
+    },
+    {
+      "name": "manage-subscription",
+      "group": "settings",
+      "nav": "Account",
+      "states": [
+        "default"
+      ],
+      "purpose": "View plan, renewal date and cancel clearly.",
+      "content": "Title 'Subscription'. Focal card: 'Mirra Monthly' status chip 'Active', '79 ILS / month', 'Renews Nov 27, 2026', 'Started after free trial on Oct 30'. Rows: 'Payment via App Store', 'Restore purchases', 'Billing history'. Card 'Cancel subscription' with text 'You keep access until Nov 27. No further charges.' and a secondary danger-outlined button 'Cancel subscription'. Caption 'Cancellation is handled by Apple / Google; we take you straight there.'"
+    },
+    {
+      "name": "privacy-data",
+      "group": "settings",
+      "nav": "Account",
+      "states": [
+        "default"
+      ],
+      "purpose": "Privacy center and data deletion.",
+      "content": "Title 'Privacy & data'. Focal card 'Your photos' big numeral '14 photos stored', sub 'Auto-deleted after 30 days'. Toggle 'Allow my clinic to see shared previews' on. Rows: 'Privacy policy', 'Consent you gave - Oct 26, 2026', 'Download my data'. Card list 'Delete photos' with 3 rows of thumbnails and trash icons. Danger outlined button 'Delete all my data'. Caption 'Deletion is permanent and removes photos from our servers and AI provider within 24 hours.'"
+    },
+    {
+      "name": "clinic-dashboard",
+      "group": "core",
+      "nav": "Clinic",
+      "states": [
+        "default"
+      ],
+      "purpose": "Clinic admin sees today's client sessions.",
+      "content": "Caption 'Lumiere Aesthetic Clinic - Tel Aviv', title 'Today'. Focal gradient card '8 client sessions today' big numeral, sub '5 filler, 2 hair, 1 makeup'. Stat tiles: 'Shared previews this week 23', 'Booked after preview 61%'. List 'Sessions' rows with real photo avatars: Noa Levi 10:30 'Lip filler 1.0 ml preview' chip 'Shared'; Maya Cohen 11:15 'Cheek filler'; Yael Mizrahi 12:00 'Soft bob + chestnut'; Tamar Ben-David 13:30 'Forehead Botox 20 units'. Each with chevron."
+    },
+    {
+      "name": "clinic-client",
+      "group": "detail",
+      "nav": "Clinic",
+      "states": [
+        "default"
+      ],
+      "purpose": "Clinic view of one client's session history.",
+      "content": "Back arrow. Header real photo avatar Noa Levi, 'Client since Oct 2026', chips 'Consent signed Oct 26', '18+ verified'. Focal before/after thumbnail pair with AI simulation pill: 'Lip filler 1.0 ml - Oct 26'. Timeline list: Oct 26 'Lip filler 1.0 ml - shared', Oct 26 'Soft bob + chestnut - shared', Oct 22 'Cheek filler 1.5 ml - private (not shared)' greyed lock. Notes field 'Consultation note' prefilled 'Prefers natural look, start 0.7 ml.' Primary 'Book consultation'."
+    }
+  ],
+  "designSystem": {
+    "variant": "P25",
+    "variantName": "emerald vault",
+    "theme": "light",
+    "frame": "393x852 mobile (iPhone 16/17), top safe area ~59px, bottom ~34px",
+    "color": {
+      "background": "#F4FCF9",
+      "surface": "#FFFFFF",
+      "surfaceAlt": "#EAF6F0",
+      "accent": "#10A56A",
+      "accentFill": "#0D7C50",
+      "accentTint": "#E2F4EC",
+      "accentPressed": "#0B734A",
+      "support": "#F59BD0",
+      "text": {
+        "primary": "#0C1F18",
+        "secondary": "#46594F",
+        "tertiary": "#5A6A60"
+      },
+      "border": "#DCEAE3",
+      "success": "#16A34A",
+      "warning": "#B45309",
+      "danger": "#DC2626",
+      "gradient": [
+        "#0D7C50",
+        "#0B734A"
+      ],
+      "statusOn": {
+        "warning": {
+          "fg": "#AA4F09",
+          "tint": "#F6EAE1"
+        },
+        "success": {
+          "fg": "#0E7C3A",
+          "tint": "#E3F4E9"
+        },
+        "danger": {
+          "fg": "#CE2020",
+          "tint": "#FBE5E5"
+        },
+        "info": {
+          "fg": "#0D774D",
+          "tint": "#E2EFEA"
+        }
+      },
+      "supportStrong": "#F555B4",
+      "borderStrong": "#6DA074"
+    },
+    "type": {
+      "fontFamily": "Public Sans",
+      "displayFamily": "Spectral",
+      "numeralFamily": "Public Sans",
+      "display": "32 / 700 / -0.02em",
+      "title": "20 / 600",
+      "body": "16 / 400",
+      "label": "14 / 500",
+      "caption": "13 / 500",
+      "minSize": "12px (13px chips and tags, 14px safety or legal text)",
+      "scaleRule": "Use only the 5 declared sizes (display, title, body, label, caption)."
+    },
+    "radius": {
+      "card": 20,
+      "control": 14,
+      "input": 12,
+      "pill": 999
+    },
+    "spacing": "8pt scale (4, 8, 12, 16, 24, 32), screen edge padding 20px",
+    "elevation": "card = 0 1px 2px rgba(12,31,24,.04) + 0 8px 24px rgba(12,31,24,.06)",
+    "icons": "Lucide-style rounded outline, 24px, 1.75 stroke, single set",
+    "a11y": "white labels only on #0D7C50; #10A56A for large fills/icons only; tap targets >=44pt"
+  },
+  "tokenCheck": {
+    "results": [
+      {
+        "pair": "text.primary on background",
+        "ratio": 16.44,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.primary on surface",
+        "ratio": 17.15,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on background",
+        "ratio": 7.19,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.secondary on surface",
+        "ratio": 7.49,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "text.tertiary on background",
+        "ratio": 4.19,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#67776D",
+        "after": 4.54
+      },
+      {
+        "pair": "text.tertiary on surface",
+        "ratio": 4.73,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white label on accentFill (buttons)",
+        "ratio": 4.6,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "accentFill text on accentTint (chips, selected)",
+        "ratio": 4.03,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0D7C50",
+        "after": 4.58
+      },
+      {
+        "pair": "accentFill as link text on background",
+        "ratio": 5.01,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "white on hero gradient (both stops)",
+        "ratio": 5.23,
+        "target": 4.5,
+        "pass": true,
+        "fixedTo": null,
+        "after": null
+      },
+      {
+        "pair": "warning text on its tint and on surface",
+        "ratio": 4.25,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#AA4F09",
+        "after": 4.64
+      },
+      {
+        "pair": "success text on its tint and on surface",
+        "ratio": 2.89,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0E7C3A",
+        "after": 4.64
+      },
+      {
+        "pair": "danger text on its tint and on surface",
+        "ratio": 4.01,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#CE2020",
+        "after": 4.53
+      },
+      {
+        "pair": "info text on its tint and on surface",
+        "ratio": 4.42,
+        "target": 4.5,
+        "pass": false,
+        "fixedTo": "#0D774D",
+        "after": 4.72
+      },
+      {
+        "pair": "support as chart line / icon on surface (non-text 3:1)",
+        "ratio": 2.0,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#F555B4",
+        "after": 3.07
+      },
+      {
+        "pair": "input / control border on surface (non-text 3:1)",
+        "ratio": 1.24,
+        "target": 3.0,
+        "pass": false,
+        "fixedTo": "#6DA074",
+        "after": 3.03
+      }
+    ],
+    "changed": {
+      "text.tertiary": {
+        "from": "#6B7D73",
+        "to": "#67776D"
+      },
+      "accentFill": {
+        "from": "#0D7C50",
+        "to": "#0D7C50"
+      }
+    },
+    "passed": true
+  }
+}

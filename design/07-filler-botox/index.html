@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Filler &amp; Botox</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Spectral & Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "status-success-bg": "#E3F4E9",
+            "secondary": "#006c44",
+            "on-primary-fixed": "#002111",
+            "on-surface-variant": "#3d4a41",
+            "error-container": "#ffdad6",
+            "primary-container": "#008654",
+            "surface-dim": "#d5dcd4",
+            "text-primary": "#0C1F18",
+            "surface-container-high": "#e3eae2",
+            "status-danger-bg": "#FBE5E5",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-tertiary": "#ffffff",
+            "support-blush": "#F59BD0",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#ecf3eb",
+            "status-warning-bg": "#F6EAE1",
+            "on-surface": "#171d19",
+            "on-secondary": "#ffffff",
+            "support-pink": "#F555B4",
+            "accent-fill": "#0D7C50",
+            "status-danger-text": "#CE2020",
+            "tertiary-container": "#c05053",
+            "surface-container-lowest": "#ffffff",
+            "accent-fill-disabled": "#B9DCCB",
+            "background": "#F4FCF9",
+            "inverse-primary": "#5fdd9d",
+            "outline": "#6d7a70",
+            "surface-bright": "#f4fbf3",
+            "secondary-container": "#93f3bd",
+            "border-hairline": "#DCEAE3",
+            "on-secondary-container": "#007148",
+            "accent-fill-pressed": "#0B734A",
+            "primary-fixed": "#7dfab7",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "on-secondary-fixed": "#002112",
+            "outline-variant": "#bccabe",
+            "primary": "#006a42",
+            "accent-tint": "#E2F4EC",
+            "primary-fixed-dim": "#5fdd9d",
+            "secondary-fixed": "#96f6c0",
+            "surface-container": "#e9f0e8",
+            "status-success-text": "#0E7C3A",
+            "secondary-fixed-dim": "#7ad9a5",
+            "surface": "#FFFFFF",
+            "inverse-surface": "#2b322d",
+            "status-warning-text": "#AA4F09",
+            "surface-container-highest": "#dde4dd",
+            "surface-variant": "#dde4dd",
+            "on-tertiary-fixed": "#410008",
+            "tertiary-fixed": "#ffdad8",
+            "text-tertiary": "#5A6A60",
+            "surface-container-low": "#eff5ee",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#005232",
+            "on-error-container": "#93000a",
+            "surface-tint": "#006d43",
+            "on-tertiary-container": "#fffbff",
+            "on-primary-container": "#f6fff5",
+            "tertiary": "#a0383d",
+            "status-info-bg": "#E2EFEA",
+            "on-primary-fixed-variant": "#005232",
+            "on-primary": "#ffffff",
+            "text-secondary": "#46594F",
+            "surface-alt": "#EAF6F0",
+            "status-info-text": "#0D774D",
+            "control-border": "#6DA074",
+            "on-background": "#171d19"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "20px",
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "display": ["Spectral", "serif"],
+            "caption": ["Public Sans", "sans-serif"],
+            "label": ["Public Sans", "sans-serif"],
+            "body": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "display": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }
+            ],
+            "caption": [
+              "13px",
+              {
+                "lineHeight": "18px",
+                "fontWeight": "500"
+              }
+            ],
+            "label": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ],
+            "body": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "600"
+              }
+            ]
+          },
+          "boxShadow": {
+            "mirra-card": "0 1px 2px rgba(12, 31, 24, 0.04), 0 8px 24px rgba(12, 31, 24, 0.06)",
+            "mirra-thumb": "0 2px 6px rgba(12, 31, 24, 0.18)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Hide scrollbar for aesthetic horizontal scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Range input styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type=range]:focus {
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      background: #E2F4EC;
+      height: 6px;
+      border-radius: 9999px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid #0D7C50;
+      box-shadow: 0 2px 6px rgba(12, 31, 24, 0.16);
+      margin-top: -9px;
+      transition: transform 0.1s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:active {
+      transform: scale(1.1);
+    }
+    input[type=range]::-moz-range-track {
+      background: #E2F4EC;
+      height: 6px;
+      border-radius: 9999px;
+    }
+    input[type=range]::-moz-range-thumb {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid #0D7C50;
+      box-shadow: 0 2px 6px rgba(12, 31, 24, 0.16);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen flex justify-center selection:bg-accent-tint selection:text-accent-fill">
+<!-- Mobile Viewport Container (393px width fixed frame with responsive fallback) -->
+<main class="w-full max-w-[393px] min-h-screen bg-background relative flex flex-col pb-36 shadow-sm overflow-x-hidden border-x border-border-hairline/60">
+<!-- iOS Status Bar Simulation -->
+<header class="w-full pt-3 px-7 flex items-center justify-between z-20 select-none">
+<span class="font-body text-caption font-semibold text-text-primary tracking-tight">9:41</span>
+<div class="flex items-center space-x-1.5 text-text-primary">
+<svg class="w-4 h-3.5 fill-current" viewbox="0 0 16 12">
+<path d="M1 9.5h2V12H1zm3.5-3h2V12h-2zm3.5-3h2V12h-2zm3.5-3h2V12h-2z"></path>
+</svg>
+<svg class="w-4 h-3.5 fill-current" viewbox="0 0 16 12">
+<path d="M8 2.5C4.7 2.5 1.8 3.9 0 6.1L8 15.5l8-9.4C14.2 3.9 11.3 2.5 8 2.5z"></path>
+</svg>
+<div class="w-6 h-3 border border-text-primary/80 rounded-sm p-0.5 flex items-center">
+<div class="h-full w-4/5 bg-text-primary rounded-2xs"></div>
+</div>
+</div>
+</header>
+<!-- Top App Bar (Task Header) -->
+<nav class="w-full px-5 py-3 flex items-center justify-between z-20">
+<div class="flex items-center space-x-3">
+<button aria-label="Go back" class="w-9 h-9 rounded-full flex items-center justify-center text-text-primary hover:bg-surface transition-colors active:scale-95 duration-150" type="button">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.75" viewbox="0 0 24 24">
+<path d="M15.75 19.5L8.25 12l7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<h1 class="font-display text-[22px] font-semibold text-text-primary tracking-tight leading-none">
+          Filler &amp; Botox
+        </h1>
+</div>
+<div class="flex items-center space-x-2">
+<div class="relative w-9 h-9 rounded-full overflow-hidden border border-border-hairline ring-2 ring-accent-tint shadow-sm">
+<img alt="Noa user profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UD1P22pt87PytX2bvcyeZdMkM6VQke-uGu1cCebjuS2AsaWvMU8V1qKCPs0tAx9iXV3LkxdaAQJUJQ5s2dJjIPVusOwUhy5l4ywVt63Ax01ad6m-EGNEGqJ4yS794ZVpRrsfBfA8Ae4nTnGey4rf7fAFA-Pik7gcViwwIsPFkQkTzkdv-RC32gKfQyBqoSqG8xCRSK-CJLsk9qUlmzufNDsxvcXFnPL3BL_1oXDEcRO8JpCHzymDiJCpQy"/>
+</div>
+</div>
+</nav>
+<!-- Content Canvas -->
+<div class="px-5 space-y-4 pt-1">
+<!-- Focal Portrait Card with Interactive Facial Markers -->
+<section class="relative w-full aspect-[4/4.3] rounded-[20px] overflow-hidden bg-surface shadow-mirra-card border border-border-hairline group">
+<!-- High-Resolution Clinical Portrait -->
+<img class="w-full h-full object-cover object-center" data-alt="A clean, luminous clinical portrait photograph of a natural woman's face front-facing with neutral calm expression, gentle daylight illumination, smooth soft skin, studio white background, showcasing aesthetic facial anatomy in modern medical spa aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4uVxgIQq7Ubx-umPUgi3XHnOaQPpTJzQdoPvNYsY_7LwqEWWvtVD8w5CrH8a78G2Hl3p3S6DCqYW3_6SUlDP3GhQrFGaYnSYK4Hkvs5Qp-R20GkMMcUHrzhAm5-j6-0yAYIUhj19qcx9rZPTD1VX_YmYBlL1xsVeKb3Fg3oC39goLyh6JBLW2-A8LKGItKodyN7eSK5deCf3tO3Lz2zuTSU9NxmY-te1BjmYQIJYeTebD1zO6OShNJtQSxoUr-aVnIijXL4GANFAq"/>
+<!-- Subtle Ambient Gradient Overlay for pin contrast -->
+<div class="absolute inset-0 bg-gradient-to-t from-text-primary/30 via-transparent to-text-primary/10 pointer-events-none"></div>
+<!-- AI Simulation Pill Indicator -->
+<div class="absolute bottom-3 left-3 flex items-center space-x-1.5 px-3 py-1 rounded-full bg-text-primary/80 backdrop-blur-md text-surface text-[12px] font-caption font-medium shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-primary-fixed" data-icon="auto_awesome">auto_awesome</span>
+<span>AI simulation</span>
+</div>
+<!-- Anatomical Facial Markers (Overlay Pins) -->
+<!-- Marker 1: Forehead lines -->
+<button aria-label="Select Forehead zone" class="absolute top-[21%] left-[49%] -translate-x-1/2 -translate-y-1/2 group/pin cursor-pointer focus:outline-none" type="button">
+<span class="w-6 h-6 rounded-full bg-surface border border-border-hairline shadow-md flex items-center justify-center font-label text-[12px] font-semibold text-text-secondary transition-transform duration-200 group-hover/pin:scale-110">
+            1
+          </span>
+</button>
+<!-- Marker 2: Under-eye -->
+<button aria-label="Select Under-eye zone" class="absolute top-[44%] left-[36%] -translate-x-1/2 -translate-y-1/2 group/pin cursor-pointer focus:outline-none" type="button">
+<span class="w-6 h-6 rounded-full bg-surface border border-border-hairline shadow-md flex items-center justify-center font-label text-[12px] font-semibold text-text-secondary transition-transform duration-200 group-hover/pin:scale-110">
+            2
+          </span>
+</button>
+<!-- Marker 3: Cheeks -->
+<button aria-label="Select Cheeks zone" class="absolute top-[52%] left-[68%] -translate-x-1/2 -translate-y-1/2 group/pin cursor-pointer focus:outline-none" type="button">
+<span class="w-6 h-6 rounded-full bg-surface border border-border-hairline shadow-md flex items-center justify-center font-label text-[12px] font-semibold text-text-secondary transition-transform duration-200 group-hover/pin:scale-110">
+            3
+          </span>
+</button>
+<!-- Marker 4: Lips (ACTIVE/SELECTED) with Radiant Glow Pulse -->
+<div class="absolute top-[71%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer">
+<div class="absolute w-10 h-10 rounded-full bg-accent-fill/25 animate-ping opacity-75"></div>
+<div class="absolute w-9 h-9 rounded-full bg-accent-tint/60 ring-2 ring-accent-fill/40"></div>
+<span class="relative w-7 h-7 rounded-full bg-accent-fill shadow-md flex items-center justify-center font-label text-[13px] font-bold text-surface ring-2 ring-white">
+            4
+          </span>
+</div>
+<!-- Marker 5: Jawline -->
+<button aria-label="Select Jawline zone" class="absolute top-[84%] left-[64%] -translate-x-1/2 -translate-y-1/2 group/pin cursor-pointer focus:outline-none" type="button">
+<span class="w-6 h-6 rounded-full bg-surface border border-border-hairline shadow-md flex items-center justify-center font-label text-[12px] font-semibold text-text-secondary transition-transform duration-200 group-hover/pin:scale-110">
+            5
+          </span>
+</button>
+</section>
+<!-- Treatment Area Filter Chips -->
+<section aria-label="Facial Treatment Zones" class="w-full">
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-1 -mx-5 px-5">
+<!-- Selected Chip: Lips -->
+<button class="h-[34px] px-4 rounded-full bg-accent-tint text-accent-fill font-label text-label font-semibold flex items-center space-x-1.5 shrink-0 border border-accent-fill/20 shadow-xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-fill"></span>
+<span>Lips</span>
+</button>
+<!-- Unselected Chip: Cheeks -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-secondary hover:text-text-primary hover:border-outline-variant font-label text-label font-medium transition-colors shrink-0" type="button">
+<span>Cheeks</span>
+</button>
+<!-- Unselected Chip: Jawline -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-secondary hover:text-text-primary hover:border-outline-variant font-label text-label font-medium transition-colors shrink-0" type="button">
+<span>Jawline</span>
+</button>
+<!-- Unselected Chip: Forehead lines -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-secondary hover:text-text-primary hover:border-outline-variant font-label text-label font-medium transition-colors shrink-0" type="button">
+<span>Forehead lines</span>
+</button>
+<!-- Unselected Chip: Under-eye -->
+<button class="h-[34px] px-4 rounded-full bg-surface border border-border-hairline text-text-secondary hover:text-text-primary hover:border-outline-variant font-label text-label font-medium transition-colors shrink-0" type="button">
+<span>Under-eye</span>
+</button>
+</div>
+</section>
+<!-- Configuration Card: "Lip filler" -->
+<section class="bg-surface rounded-[20px] p-5 shadow-mirra-card border border-border-hairline space-y-5">
+<!-- Header -->
+<div class="flex items-center justify-between border-b border-border-hairline/60 pb-3.5">
+<div>
+<h2 class="font-title text-title text-text-primary leading-tight">Lip filler</h2>
+<p class="font-caption text-caption text-text-secondary mt-0.5">Volume &amp; shape enhancement</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-accent-tint font-label text-[12px] font-semibold text-accent-fill border border-accent-fill/15">
+            Zone #4
+          </span>
+</div>
+<!-- Volume Adjustment Control -->
+<div class="space-y-3">
+<div class="flex items-baseline justify-between">
+<span class="font-label text-label font-medium text-text-secondary">Volume</span>
+<div class="flex items-baseline space-x-1">
+<span class="font-display text-[30px] font-semibold text-text-primary tracking-tight leading-none" id="volume-val">1.0</span>
+<span class="font-body text-caption font-medium text-text-tertiary">ml</span>
+</div>
+</div>
+<!-- Slider -->
+<div class="relative pt-1 pb-1">
+<input aria-label="Adjust injection volume in milliliters" class="w-full focus:outline-none" id="volume-slider" max="2.0" min="0.5" step="0.1" type="range" value="1.0"/>
+<div class="flex justify-between items-center mt-2 px-0.5 font-caption text-[12px] text-text-tertiary font-medium">
+<span>0.5 ml (Subtle)</span>
+<span class="text-accent-fill font-semibold">1.0 ml (Standard)</span>
+<span>2.0 ml (Plump)</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-border-hairline/60 w-full"></div>
+<!-- Natural Look Toggle -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="pr-3">
+<div class="flex items-center space-x-1.5">
+<span class="font-title text-[15px] font-semibold text-text-primary">Natural look</span>
+<span class="w-1.5 h-1.5 rounded-full bg-support-blush"></span>
+</div>
+<p class="font-caption text-[12.5px] text-text-secondary leading-snug mt-0.5">
+              Preserves personal anatomy and subtle lip ratio
+            </p>
+</div>
+<!-- iOS Toggle Switch -->
+<button aria-checked="true" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-accent-fill transition-colors duration-200 ease-in-out focus:outline-none" id="toggle-btn" role="switch" type="button">
+<span class="sr-only">Toggle natural look mode</span>
+<span class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-surface shadow-md ring-0 transition duration-200 ease-in-out translate-x-5" id="toggle-knob"></span>
+</button>
+</div>
+</section>
+<!-- Clinical Advisory Notice -->
+<section class="flex items-start space-x-2.5 px-3 py-2 rounded-xl bg-status-info-bg/70 border border-border-hairline text-text-secondary">
+<span class="material-symbols-outlined text-[19px] text-status-info-text shrink-0 mt-0.5" data-icon="info">info</span>
+<p class="font-body text-caption leading-relaxed">
+          AI simulation is an illustrative guide. Your practitioner confirms the personalized treatment plan during clinical consultation.
+        </p>
+</section>
+</div>
+<!-- Docked Floating Bottom Action Bar -->
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[393px] bg-background/95 backdrop-blur-md px-5 pt-3 pb-8 z-40 border-t border-border-hairline/70">
+<div class="flex flex-col items-center space-y-2">
+<!-- Primary Action Button (52px height pill, #0D7C50) -->
+<button class="w-full h-[52px] rounded-full bg-accent-fill hover:bg-accent-fill-pressed active:scale-[0.98] transition-all duration-150 text-surface font-title text-body font-semibold flex items-center justify-center space-x-2 shadow-md" type="button">
+<span>Generate preview</span>
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2.25" viewbox="0 0 24 24">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Credit Helper Note -->
+<p class="font-caption text-caption text-text-secondary flex items-center space-x-1 pt-0.5">
+<span class="text-accent-fill font-bold text-xs">✦</span>
+<span>1 preview uses 1 credit · 28 left this month</span>
+</p>
+<!-- Home Bar Device Indicator -->
+<div class="w-32 h-1 bg-text-primary/20 rounded-full mt-2"></div>
+</div>
+</footer>
+</main>
+<!-- Interactive script for slider and toggle micro-interactions -->
+<script>
+    const slider = document.getElementById('volume-slider');
+    const valDisplay = document.getElementById('volume-val');
+    if (slider && valDisplay) {
+      slider.addEventListener('input', (e) => {
+        valDisplay.textContent = parseFloat(e.target.value).toFixed(1);
+      });
+    }
+
+    const toggle = document.getElementById('toggle-btn');
+    const knob = document.getElementById('toggle-knob');
+    let isChecked = true;
+    if (toggle && knob) {
+      toggle.addEventListener('click', () => {
+        isChecked = !isChecked;
+        toggle.setAttribute('aria-checked', isChecked.toString());
+        if (isChecked) {
+          toggle.classList.remove('bg-surface-dim');
+          toggle.classList.add('bg-accent-fill');
+          knob.classList.remove('translate-x-0');
+          knob.classList.add('translate-x-5');
+        } else {
+          toggle.classList.remove('bg-accent-fill');
+          toggle.classList.add('bg-surface-dim');
+          knob.classList.remove('translate-x-5');
+          knob.classList.add('translate-x-0');
+        }
+      });
+    }
+  </script>
+</body></html>

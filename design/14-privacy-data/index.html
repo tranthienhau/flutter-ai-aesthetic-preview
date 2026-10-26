@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mirra - Privacy &amp; data</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#eff5ee",
+            "secondary-fixed": "#96f6c0",
+            "border-hairline": "#DCEAE3",
+            "primary-fixed-dim": "#5fdd9d",
+            "surface": "#FFFFFF",
+            "on-surface-variant": "#3d4a41",
+            "accent-fill": "#0D7C50",
+            "status-danger-text": "#CE2020",
+            "accent-fill-disabled": "#B9DCCB",
+            "text-secondary": "#46594F",
+            "status-success-text": "#0E7C3A",
+            "inverse-surface": "#2b322d",
+            "surface-dim": "#d5dcd4",
+            "on-primary-container": "#f6fff5",
+            "outline": "#6d7a70",
+            "on-primary-fixed-variant": "#005232",
+            "secondary-container": "#93f3bd",
+            "status-success-bg": "#E3F4E9",
+            "primary-fixed": "#7dfab7",
+            "primary": "#006a42",
+            "surface-variant": "#dde4dd",
+            "inverse-on-surface": "#ecf3eb",
+            "on-primary-fixed": "#002111",
+            "support-pink": "#F555B4",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "secondary": "#006c44",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#c05053",
+            "surface-alt": "#EAF6F0",
+            "on-tertiary-container": "#fffbff",
+            "accent-tint": "#E2F4EC",
+            "on-surface": "#171d19",
+            "on-secondary-fixed-variant": "#005232",
+            "status-info-bg": "#E2EFEA",
+            "status-warning-bg": "#F6EAE1",
+            "surface-tint": "#006d43",
+            "control-border": "#6DA074",
+            "text-tertiary": "#5A6A60",
+            "status-danger-bg": "#FBE5E5",
+            "on-error-container": "#93000a",
+            "surface-container-high": "#e3eae2",
+            "accent-fill-pressed": "#0B734A",
+            "text-primary": "#0C1F18",
+            "secondary-fixed-dim": "#7ad9a5",
+            "on-error": "#ffffff",
+            "status-warning-text": "#AA4F09",
+            "inverse-primary": "#5fdd9d",
+            "primary-container": "#008654",
+            "surface-container-highest": "#dde4dd",
+            "outline-variant": "#bccabe",
+            "status-info-text": "#0D774D",
+            "on-background": "#171d19",
+            "surface-bright": "#f4fbf3",
+            "on-tertiary-fixed": "#410008",
+            "background": "#F4FCF9",
+            "on-secondary-container": "#007148",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "on-tertiary-fixed-variant": "#83232a",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdad8",
+            "surface-container": "#e9f0e8",
+            "tertiary": "#a0383d",
+            "surface-container-lowest": "#ffffff",
+            "support-blush": "#F59BD0",
+            "on-secondary-fixed": "#002112",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "label": ["Public Sans", "sans-serif"],
+            "caption": ["Public Sans", "sans-serif"],
+            "body": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "display": ["Spectral", "serif"]
+          },
+          "fontSize": {
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(12,31,24,.04), 0 8px 24px rgba(12,31,24,.06)",
+            "subtle": "0 1px 3px rgba(12,31,24,.03)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Hide scrollbars for smooth mobile viewport */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#e8f1ec] flex justify-center items-center min-h-screen p-0 md:py-8 antialiased selection:bg-accent-tint selection:text-text-primary">
+<!-- Mobile Frame Container (393 x 852) -->
+<div class="w-full max-w-[393px] h-[852px] bg-background relative overflow-hidden flex flex-col shadow-2xl rounded-[44px] border-[6px] border-[#171d19]">
+<!-- iOS Status Bar -->
+<div class="h-[48px] px-7 pt-3 flex justify-between items-center z-30 select-none shrink-0">
+<span class="font-body text-[15px] font-semibold tracking-tight text-text-primary">9:41</span>
+<div class="flex items-center space-x-2 text-text-primary">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[20px]">battery_full</span>
+</div>
+</div>
+<!-- Header Navigation Bar -->
+<header class="h-14 px-margin flex items-center justify-between z-30 shrink-0 bg-background">
+<div class="flex items-center space-x-3">
+<button aria-label="Go back" class="w-9 h-9 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-alt active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<h1 class="font-display text-[24px] leading-tight font-semibold text-text-primary tracking-tight">Privacy &amp; data</h1>
+</div>
+<button class="font-label text-label font-medium text-accent-fill hover:text-accent-fill-pressed active:opacity-75 px-2 py-1 transition-colors" type="button">
+        Help
+      </button>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-1 overflow-y-auto px-margin pt-2 pb-24 space-y-4">
+<!-- FOCAL ARCHITECTURE CARD: Photos Stored & Auto-deletion -->
+<section class="bg-surface rounded-[20px] p-5 shadow-ambient border border-border-hairline relative overflow-hidden">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<div class="flex items-baseline space-x-2">
+<span class="font-display text-[44px] font-bold text-text-primary leading-none">14</span>
+<span class="font-title text-title text-text-primary font-semibold">photos stored</span>
+</div>
+<p class="font-body text-[14px] leading-5 text-text-secondary pt-1">Auto-deleted after 30 days</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-accent-tint flex items-center justify-center text-accent-fill shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-border-hairline flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-accent-fill"></span>
+<span class="font-caption text-caption text-text-secondary">AES-256 Cloud Encrypted</span>
+</div>
+<span class="font-caption text-caption font-medium text-accent-fill bg-status-info-bg px-2.5 py-0.5 rounded-full">Encrypted at rest</span>
+</div>
+</section>
+<!-- CLINIC SHARING TOGGLE CARD -->
+<section class="bg-surface rounded-[20px] p-5 shadow-ambient border border-border-hairline">
+<div class="flex items-center justify-between">
+<div class="pr-3 space-y-0.5">
+<p class="font-title text-[15px] font-medium leading-snug text-text-primary">Allow my clinic to see shared previews</p>
+<p class="font-body text-[13px] leading-tight text-text-secondary">Lumiere Aesthetic Clinic can view selected simulations</p>
+</div>
+<!-- Native Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-200 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-accent-fill"></div>
+</label>
+</div>
+</section>
+<!-- SETTINGS & AUDIT LIST CARD -->
+<section class="bg-surface rounded-[20px] shadow-ambient border border-border-hairline overflow-hidden divide-y divide-border-hairline">
+<button class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-surface-alt active:bg-surface-variant transition-colors" type="button">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-text-secondary text-[22px]">policy</span>
+<span class="font-body text-[15px] font-medium text-text-primary">Privacy policy</span>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</button>
+<button class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-surface-alt active:bg-surface-variant transition-colors" type="button">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-text-secondary text-[22px]">assignment_turned_in</span>
+<div class="space-y-0.5">
+<span class="font-body text-[15px] font-medium text-text-primary block">Consent you gave</span>
+<span class="font-caption text-caption text-text-tertiary block">Oct 26, 2026 · Biometric Preview</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</button>
+<button class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-surface-alt active:bg-surface-variant transition-colors" type="button">
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-text-secondary text-[22px]">download_for_offline</span>
+<div class="space-y-0.5">
+<span class="font-body text-[15px] font-medium text-text-primary block">Download my data</span>
+<span class="font-caption text-caption text-text-tertiary block">Archive export includes previews</span>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<span class="font-caption text-[11px] font-medium bg-surface-container-low text-text-secondary px-2 py-0.5 rounded-full border border-border-hairline">ZIP · 28 MB</span>
+<span class="material-symbols-outlined text-text-tertiary text-[20px]">chevron_right</span>
+</div>
+</button>
+</section>
+<!-- DELETE PHOTOS SUB-LIST CARD -->
+<section class="bg-surface rounded-[20px] p-4 shadow-ambient border border-border-hairline space-y-3">
+<div class="px-1 pt-1">
+<h2 class="font-display text-[18px] font-semibold text-text-primary">Delete photos</h2>
+<p class="font-body text-[13px] text-text-secondary">Remove individual AI simulation photos</p>
+</div>
+<div class="divide-y divide-border-hairline">
+<!-- Item 1 -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img alt="Lip filler aesthetic photo" class="w-11 h-11 rounded-xl object-cover border border-border-hairline" src="https://lh3.googleusercontent.com/aida/AEtjO1W1TfmTtHcvjuaxvsqz2QIKHPH4NHPF4Rq6wiUgpRwf4V6T2fEjjgUXNd7b5fDP0pl-q5d5eQW2mrjjA4wonmhGINg4UZtyaMqyQFECWL6-i7wsdsU_WwscNxfK44aRSRm1uIewtcuV5gw9M2CwC_kSpCu1x2sogzzHp2hfTn4j7MuPdUI9u7BwrGkdTISZgFq_DiAx6IhRDhf5DP1C1biaeNhx-2ZprH3qTcHNtE4MyLckAY-0g1HoAcjP"/>
+<div>
+<p class="font-title text-[14px] font-semibold text-text-primary">Lip filler 1.0 ml</p>
+<p class="font-caption text-caption text-text-tertiary">Oct 26 · 4 previews</p>
+</div>
+</div>
+<button aria-label="Delete photo" class="w-9 h-9 rounded-full flex items-center justify-center text-status-danger-text hover:bg-status-danger-bg active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img class="w-11 h-11 rounded-xl object-cover border border-border-hairline" data-alt="A clinical photography close-up portrait of a woman with a soft textured chestnut bob haircut in high key lighting, natural skin finish, warm aesthetic clinic background with mint and neutral tones, sharp authentic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACrpYxS0w90anS9zWgr60MI8MpAdRtxbSsYMFTGpkierYtU4yIILqqQBcvX_C9iN5miwXWRrB3TRfkYUD3diUXn8rSNSD1s90aYFY5fV7D8-ZuKE2gOYu7NBYSmrMYaomOJbV9k46unHo5RFvkRnE1n17ojxJO_S2FTHzP3gV26qS4XyGaZNYoIR4gcw29JmIeVBcw9qSMLG78AlmqHcOVxHFyB2OlFd3nHsdQWqX18h-OwlD4NEg6_Cz2QQsx2Op6ukniTkFMvjRi"/>
+<div>
+<p class="font-title text-[14px] font-semibold text-text-primary">Soft bob + chestnut</p>
+<p class="font-caption text-caption text-text-tertiary">Oct 26 · 2 previews</p>
+</div>
+</div>
+<button aria-label="Delete photo" class="w-9 h-9 rounded-full flex items-center justify-center text-status-danger-text hover:bg-status-danger-bg active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<img class="w-11 h-11 rounded-xl object-cover border border-border-hairline" data-alt="A professional close-up aesthetic portrait showing glowing dewy facial skin, luminous cheek highlight, natural makeup look taken in bright clinical studio lighting with soft jade and mint accents, pristine real photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3XyhDAhGoDOvs8F2m40cNlzi4Sa46wvWIE-GCek36bomY969nNBIW7Sk0zbIidpQ86ACU4hhiReBSvq5KUYg_K1ZZDOdnqee9R9Q20UOISU0wSJSDjkSEGk1WLbkw9IaJNSh6yrqdsoOtVm5FWAuf56A168FesQcCVQ3TmQnfGRXJvTcPg0jHQ8p9JF-IXNdF62B8JcU1nDPelzhKpXBBC74VwfMmDpLTH8uEUJW8Rwe8QM009dovACJ72GVoZN95AwmLuHWyZFcH"/>
+<div>
+<p class="font-title text-[14px] font-semibold text-text-primary">Soft glam makeup</p>
+<p class="font-caption text-caption text-text-tertiary">Oct 24 · 3 previews</p>
+</div>
+</div>
+<button aria-label="Delete photo" class="w-9 h-9 rounded-full flex items-center justify-center text-status-danger-text hover:bg-status-danger-bg active:opacity-75 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</section>
+<!-- DESTRUCTIVE ACTIONS & DISCLAIMER -->
+<section class="pt-2 space-y-3">
+<button class="w-full h-[52px] rounded-full bg-surface border-[1.5px] border-status-danger-text text-status-danger-text font-label text-label font-semibold flex items-center justify-center space-x-2 hover:bg-status-danger-bg active:scale-[0.99] transition-all shadow-subtle" type="button">
+<span class="material-symbols-outlined text-[20px]">delete_forever</span>
+<span>Delete all my data</span>
+</button>
+<p class="font-caption text-[12px] leading-relaxed text-text-tertiary text-center px-4">
+          Deletion is permanent and removes photos from our servers and AI provider within 24 hours.
+        </p>
+</section>
+</main>
+<!-- FIXED 4-TAB BOTTOM NAVIGATION BAR -->
+<nav class="absolute bottom-0 left-0 w-full h-[76px] pb-5 px-6 bg-surface border-t border-border-hairline flex items-center justify-around z-40 select-none">
+<!-- Tab 1: Studio -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-text-tertiary hover:text-text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+<span class="font-label text-[11px] leading-tight font-medium mt-1">Studio</span>
+</button>
+<!-- Tab 2: History -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-text-tertiary hover:text-text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">photo_library</span>
+<span class="font-label text-[11px] leading-tight font-medium mt-1">History</span>
+</button>
+<!-- Tab 3: Clinic -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-text-tertiary hover:text-text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+<span class="font-label text-[11px] leading-tight font-medium mt-1">Clinic</span>
+</button>
+<!-- Tab 4: Account (ACTIVE) -->
+<button class="flex flex-col items-center justify-center flex-1 py-1 text-accent-fill transition-colors" type="button">
+<div class="px-3.5 py-1 rounded-full bg-accent-tint flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-accent-fill" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<span class="font-label text-[11px] leading-tight font-semibold text-accent-fill mt-0.5">Account</span>
+</button>
+</nav>
+<!-- Home Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-text-primary rounded-full z-50 opacity-40"></div>
+</div>
+</body></html>

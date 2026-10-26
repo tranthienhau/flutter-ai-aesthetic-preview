@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=393, height=852, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Mirra - Hairstyle Picker</title>
+<!-- Google Fonts: Spectral & Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Spectral:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e9f0e8",
+            "surface-container-high": "#e3eae2",
+            "surface-dim": "#d5dcd4",
+            "on-tertiary-container": "#fffbff",
+            "inverse-primary": "#5fdd9d",
+            "tertiary-container": "#c05053",
+            "status-danger-bg": "#FBE5E5",
+            "surface-variant": "#dde4dd",
+            "on-surface": "#171d19",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "outline": "#6d7a70",
+            "on-primary-fixed": "#002111",
+            "on-surface-variant": "#3d4a41",
+            "on-primary-fixed-variant": "#005232",
+            "outline-variant": "#bccabe",
+            "primary-fixed-dim": "#5fdd9d",
+            "text-secondary": "#46594F",
+            "support-blush": "#F59BD0",
+            "inverse-surface": "#2b322d",
+            "text-primary": "#0C1F18",
+            "surface-container-low": "#eff5ee",
+            "primary-fixed": "#7dfab7",
+            "status-info-text": "#0D774D",
+            "secondary-fixed": "#96f6c0",
+            "surface-container-highest": "#dde4dd",
+            "on-tertiary-fixed": "#410008",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#ecf3eb",
+            "text-tertiary": "#5A6A60",
+            "surface-container-lowest": "#ffffff",
+            "status-warning-text": "#AA4F09",
+            "secondary-container": "#93f3bd",
+            "surface-bright": "#f4fbf3",
+            "status-info-bg": "#E2EFEA",
+            "support-pink": "#F555B4",
+            "on-secondary-fixed-variant": "#005232",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#f6fff5",
+            "accent-tint": "#E2F4EC",
+            "on-tertiary-fixed-variant": "#83232a",
+            "surface-alt": "#EAF6F0",
+            "accent-fill": "#0D7C50",
+            "control-border": "#6DA074",
+            "surface-tint": "#006d43",
+            "status-success-text": "#0E7C3A",
+            "status-warning-bg": "#F6EAE1",
+            "tertiary-fixed": "#ffdad8",
+            "secondary-fixed-dim": "#7ad9a5",
+            "error": "#ba1a1a",
+            "tertiary": "#a0383d",
+            "status-success-bg": "#E3F4E9",
+            "border-hairline": "#DCEAE3",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "accent-fill-disabled": "#B9DCCB",
+            "on-primary": "#ffffff",
+            "background": "#F4FCF9",
+            "on-background": "#171d19",
+            "on-secondary-fixed": "#002112",
+            "on-secondary-container": "#007148",
+            "secondary": "#006c44",
+            "status-danger-text": "#CE2020",
+            "primary-container": "#008654",
+            "on-tertiary": "#ffffff",
+            "accent-fill-pressed": "#0B734A",
+            "primary": "#006a42",
+            "surface": "#FFFFFF"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "20px",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "body": ["Public Sans", "sans-serif"],
+            "title": ["Public Sans", "sans-serif"],
+            "display": ["Spectral", "serif"],
+            "caption": ["Public Sans", "sans-serif"],
+            "label": ["Public Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "body": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "title": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "label": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          },
+          "boxShadow": {
+            "ambient": "0 1px 2px rgba(12,31,24,0.04), 0 8px 24px rgba(12,31,24,0.06)",
+            "subtle": "0 2px 8px rgba(12,31,24,0.05)"
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbar for neat horizontal swatch scrolling */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased selection:bg-accent-tint selection:text-primary flex justify-center min-h-screen">
+<!-- Mobile Device Frame Container (393px × 852px) -->
+<main class="w-[393px] h-[852px] bg-background relative flex flex-col overflow-hidden border border-border-hairline shadow-2xl">
+<!-- Top Bar / Navigation Anchor -->
+<header class="pt-10 px-margin pb-3 flex items-center justify-between z-20 shrink-0">
+<div class="flex items-center space-x-3">
+<!-- Back Navigation Button -->
+<button aria-label="Go back" class="w-10 h-10 -ml-2 rounded-full flex items-center justify-center text-text-primary hover:bg-surface-alt transition-colors duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Title in Spectral font -->
+<h1 class="font-display text-[24px] font-semibold text-text-primary tracking-tight leading-none">
+          Hairstyle
+        </h1>
+</div>
+<!-- User Active Selfie Avatar -->
+<div class="relative flex items-center">
+<div class="w-9 h-9 rounded-full overflow-hidden p-[1.5px] bg-surface border border-border-hairline shadow-subtle">
+<img alt="User profile input portrait" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1V4eeRsKGSqBR_lHdFXtapEUDw-AF82s--XTB6TTLfMg3v_5F9FZwk15SJ2l6VYGDIAz8lKznMm5WGU34Zmsj-mDaKt8gN25YE93KtCJfGOm0vgeJD-niTHuu_xX-SAXm_2k0DGr-yzhNc6nUtR0AGUwebbMR_ksDnlTNQJ9AFwCwipORF7TWfKgH9LZgPni_sLmqSkwMPN8rVKgQU3pPUjxORHLRZo0ugZwnxqervSP6vKibUH_dHYJBw8"/>
+</div>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<div class="flex-1 overflow-y-auto px-margin pt-1 pb-32 no-scrollbar space-y-5">
+<!-- Segmented Control / Filter Tabs -->
+<div class="p-1 bg-surface-container rounded-full flex items-center w-full max-w-[280px] mx-auto border border-border-hairline/60">
+<button class="flex-1 py-1.5 rounded-full bg-surface shadow-subtle text-text-primary font-label text-[13px] font-semibold text-center transition-all" type="button">
+          Style
+        </button>
+<button class="flex-1 py-1.5 rounded-full text-text-tertiary hover:text-text-primary font-label text-[13px] font-medium text-center transition-all" type="button">
+          Color
+        </button>
+</div>
+<!-- Hair Color Chips Section -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-title text-[15px] font-semibold text-text-primary tracking-tight">Hair tone</h2>
+<span class="font-caption text-caption text-text-tertiary">Chestnut selected</span>
+</div>
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<!-- Chip 1: Natural -->
+<button class="h-[34px] px-3.5 rounded-full bg-surface border border-border-hairline flex items-center space-x-2 shrink-0 hover:border-control-border transition-colors" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-[#3B2F2F] shadow-inner"></span>
+<span class="font-label text-[13px] font-medium text-text-secondary">Natural</span>
+</button>
+<!-- Chip 2: Honey blonde -->
+<button class="h-[34px] px-3.5 rounded-full bg-surface border border-border-hairline flex items-center space-x-2 shrink-0 hover:border-control-border transition-colors" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-[#D4A359] shadow-inner"></span>
+<span class="font-label text-[13px] font-medium text-text-secondary">Honey blonde</span>
+</button>
+<!-- Chip 3: Chestnut (SELECTED) -->
+<button class="h-[34px] px-3.5 rounded-full bg-accent-tint border border-accent-fill flex items-center space-x-2 shrink-0 shadow-subtle" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-[#6A381F] ring-1 ring-white shadow-inner"></span>
+<span class="font-label text-[13px] font-semibold text-accent-fill">Chestnut</span>
+</button>
+<!-- Chip 4: Copper -->
+<button class="h-[34px] px-3.5 rounded-full bg-surface border border-border-hairline flex items-center space-x-2 shrink-0 hover:border-control-border transition-colors" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-[#A54A2A] shadow-inner"></span>
+<span class="font-label text-[13px] font-medium text-text-secondary">Copper</span>
+</button>
+<!-- Chip 5: Ash -->
+<button class="h-[34px] px-3.5 rounded-full bg-surface border border-border-hairline flex items-center space-x-2 shrink-0 hover:border-control-border transition-colors" type="button">
+<span class="w-3.5 h-3.5 rounded-full bg-[#8C827A] shadow-inner"></span>
+<span class="font-label text-[13px] font-medium text-text-secondary">Ash</span>
+</button>
+</div>
+</section>
+<!-- 2-Column Hairstyle Grid -->
+<section class="space-y-2.5">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-title text-[15px] font-semibold text-text-primary tracking-tight">Cuts &amp; Silhouettes</h2>
+<span class="font-caption text-caption text-text-tertiary">6 aesthetics</span>
+</div>
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Card 1: Long layers -->
+<div class="group relative bg-surface rounded-[20px] p-2 border border-border-hairline shadow-ambient hover:shadow-md transition-all cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Long layers hairstyle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1UBxYgdK9YSV92zc7vYH-Bfxbg6p4A7l7_Bac6u2rLMY3YUHyhEpk2ErGjyNOqP7P89l_-fwBxcst6vpfmoGDPyM7DzblFa7K3BWCVt8-FP9zeJsGBJLbRzKWN8vaajETh7fqNVbKt24ue5dEPEG-qcOvnoNemfbDurhHPFTjfHbglAUeEAhMBJteqvzWzCMBjZVXvTr3diu_z4hn_va7yEJODp4AWA1ghrS38ngiV2EXDw20apuYBko6rb"/>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-medium text-text-primary">Long layers</span>
+<span class="material-symbols-outlined text-[18px] text-border-hairline group-hover:text-control-border transition-colors">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Card 2: Soft bob (SELECTED STATE) -->
+<div class="relative bg-surface rounded-[20px] p-2 border-2 border-accent-fill shadow-ambient ring-2 ring-accent-tint/60 cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Soft bob hairstyle" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X15ZtN6fB-2-fSvXTAdJAKocpUhMJeRGL0emChd1VXsfZlkU7E1zNu4hamJirvYmwjgvMzZ1WvS573pWIE-oInJs-yCEGGtxQJkUS_MWrgs48Bhkej0fZyMrU3VvhN2lTEzoZ2B_sWDMrEbrAH0oCz-eJoVAhdrCbCX-NVlfRWkULM5a0y9MEUGfw3h73-5XTeNm_eLPJ1h1PZ8L00YhiqoNnvSAbxQsFxW1hDJMQVnfZr5ExBLMUAsmsx"/>
+<!-- Selected Checkmark Badge Overlay -->
+<div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-accent-fill text-white flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined fill-icon text-[16px]">check</span>
+</div>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-inverse-surface/85 backdrop-blur-sm flex items-center space-x-1">
+<span class="material-symbols-outlined fill-icon text-accent-tint text-[11px]">auto_awesome</span>
+<span class="text-[10px] font-medium text-white tracking-wide">AI Match</span>
+</div>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-semibold text-accent-fill">Soft bob</span>
+<span class="material-symbols-outlined fill-icon text-[18px] text-accent-fill">check_circle</span>
+</div>
+</div>
+<!-- Card 3: Curtain bangs -->
+<div class="group relative bg-surface rounded-[20px] p-2 border border-border-hairline shadow-ambient hover:shadow-md transition-all cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Curtain bangs hairstyle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1Wdhu9Yw-49DP9aHUXRT-uLYIFOPySzjBF7lknu76YqfFCA8XdG3XAqrWLvCg_7QgvmL7GUTa-8wLcFBDTPJbM4mBc74DPuRNF-IXXaRXcdFCB43yXo90oeasUfsJm0opIL-LES3-rcnQR2YmZfTbrUfvV3n4VzPY_2i3NBMaWP5FVNJHjN-U9XLIbr7yxVb6RHZqrvo5I50SGayvfsMtCn7LAYDA0ilDcWRE9RCQaCFvJZXjHKg59UinGH"/>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-medium text-text-primary">Curtain bangs</span>
+<span class="material-symbols-outlined text-[18px] text-border-hairline group-hover:text-control-border transition-colors">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Card 4: Pixie -->
+<div class="group relative bg-surface rounded-[20px] p-2 border border-border-hairline shadow-ambient hover:shadow-md transition-all cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Pixie haircut" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1V_nY6o2zJ8vZJyOTyZ_eAUa6RWBLRTPrO8fCetBKlZbyd42YvZ4xAlp-a-nzql0I1uciPjvos7PkczdPXTfAhx7xTz8X8pq3o5eXfAL9ywPcmM1yaTMSElGTxWWDbcPkU3Po3bgpDm2l0vTmv9xAdgWPn4WZsfFxWpVTs_Jm5jFfpqkj9mZaks-vkrLXMY4xXOE0N9ywhRN1nL_vhwKVisjfoyAyayy_TlxjF-r0aLki0K2gChfjkxB-Q"/>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-medium text-text-primary">Pixie</span>
+<span class="material-symbols-outlined text-[18px] text-border-hairline group-hover:text-control-border transition-colors">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Card 5: Beach waves -->
+<div class="group relative bg-surface rounded-[20px] p-2 border border-border-hairline shadow-ambient hover:shadow-md transition-all cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Beach waves hairstyle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1UD1P22pt87PytX2bvcyeZdMkM6VQke-uGu1cCebjuS2AsaWvMU8V1qKCPs0tAx9iXV3LkxdaAQJUJQ5s2dJjIPVusOwUhy5l4ywVt63Ax01ad6m-EGNEGqJ4yS794ZVpRrsfBfA8Ae4nTnGey4rf7fAFA-Pik7gcViwwIsPFkQkTzkdv-RC32gKfQyBqoSqG8xCRSK-CJLsk9qUlmzufNDsxvcXFnPL3BL_1oXDEcRO8JpCHzymDiJCpQy"/>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-medium text-text-primary">Beach waves</span>
+<span class="material-symbols-outlined text-[18px] text-border-hairline group-hover:text-control-border transition-colors">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Card 6: Sleek ponytail -->
+<div class="group relative bg-surface rounded-[20px] p-2 border border-border-hairline shadow-ambient hover:shadow-md transition-all cursor-pointer flex flex-col">
+<div class="w-full aspect-[4/5] rounded-[14px] overflow-hidden bg-surface-container relative">
+<img alt="Sleek ponytail hairstyle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1W1TfmTtHcvjuaxvsqz2QIKHPH4NHPF4Rq6wiUgpRwf4V6T2fEjjgUXNd7b5fDP0pl-q5d5eQW2mrjjA4wonmhGINg4UZtyaMqyQFECWL6-i7wsdsU_WwscNxfK44aRSRm1uIewtcuV5gw9M2CwC_kSpCu1x2sogzzHp2hfTn4j7MuPdUI9u7BwrGkdTISZgFq_DiAx6IhRDhf5DP1C1biaeNhx-2ZprH3qTcHNtE4MyLckAY-0g1HoAcjP"/>
+</div>
+<div class="pt-2 pb-0.5 px-1 flex items-center justify-between">
+<span class="font-label text-[14px] font-medium text-text-primary">Sleek ponytail</span>
+<span class="material-symbols-outlined text-[18px] text-border-hairline group-hover:text-control-border transition-colors">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Subtext / Clinic Note -->
+<div class="py-1 px-3 rounded-xl bg-status-info-bg/40 border border-border-hairline flex items-start space-x-2">
+<span class="material-symbols-outlined text-[18px] text-accent-fill shrink-0 mt-0.5">verified</span>
+<p class="font-caption text-[12px] leading-relaxed text-text-secondary">
+          Simulations adapt naturally to your bone structure, hairline density, and natural complexion.
+        </p>
+</div>
+</div>
+<!-- Sticky Bottom Action Footer Area -->
+<footer class="absolute bottom-0 left-0 w-full px-margin pt-3 pb-8 bg-gradient-to-t from-background via-background/95 to-transparent z-30 flex flex-col items-center">
+<!-- Full-Width Primary Pill Action Button (Height 52px) -->
+<button class="w-full h-[52px] rounded-full bg-accent-fill hover:bg-accent-fill-pressed active:scale-[0.99] text-white flex items-center justify-center space-x-2 shadow-ambient transition-all duration-150" type="button">
+<span class="font-title text-[16px] font-semibold text-white tracking-wide">Generate preview</span>
+<span class="material-symbols-outlined text-[20px] text-white">arrow_forward</span>
+</button>
+<!-- Credits Subtitle Caption -->
+<div class="mt-2.5 flex items-center justify-center space-x-1.5 text-text-tertiary">
+<span class="material-symbols-outlined fill-icon text-[15px] text-support-pink">auto_awesome</span>
+<span class="font-caption text-caption text-text-tertiary">
+          1 preview uses 1 credit · 28 left this month
+        </span>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="w-32 h-1 bg-text-primary/15 rounded-full mt-3"></div>
+</footer>
+</main>
+</body></html>

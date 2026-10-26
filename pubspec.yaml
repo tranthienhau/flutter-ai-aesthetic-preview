@@ -1,0 +1,39 @@
+name: mirra
+description: "Mirra - AI before/after previews for aesthetic clinics."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^3.4.3
+  go_router: ^17.5.0
+  http: ^1.6.0
+  in_app_purchase: ^3.3.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/sim/
+    - assets/brand/
+  fonts:
+    - family: PublicSans
+      fonts:
+        - asset: assets/fonts/PublicSans.ttf
+    - family: Spectral
+      fonts:
+        - asset: assets/fonts/Spectral-Regular.ttf
+        - asset: assets/fonts/Spectral-SemiBold.ttf
+          weight: 600
